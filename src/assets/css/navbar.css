@@ -1,0 +1,45 @@
+.__logo {
+    padding: 15px
+}
+
+.__navcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.__navlink {
+    padding: 15px;
+    font-weight: 100;
+    border-bottom: 2px solid transparent;
+    color: blueviolet;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.__navlink:hover {
+    font-weight: 600;
+    transition: all 500ms;
+    border-bottom: 2px solid skyblue;
+    color: blueviolet;
+}
+
+@media only screen and (min-width: 451px) {
+    .__navcontainer {
+        display: flex;
+        flex-direction: row;
+        padding: 15px
+    }
+    .__navtoggle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .__navcontainer {
+        display: none;
+        flex-direction: row;
+    }
+    .__navtoggle {
+        display: flex;
+    }
+}
