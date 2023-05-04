@@ -1,17 +1,17 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./website/navbar";
 import Hero from "./website/hero";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <NavBar />
-      <Hero />
+      <Routes>
+        <Route key={crypto.randomUUID()} path={""} element={<Hero />} />
+      </Routes>
+      {crypto.randomUUID()}
     </>
   );
 }

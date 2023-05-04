@@ -1,5 +1,6 @@
 import viteLogo from "/vite.svg";
 import "../assets/css/navbar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   return (
@@ -34,10 +35,23 @@ const NavBar = (props) => {
           <i className="bi bi-calendar-plus"></i>
         </div>
         <div className="__navcontainer">
-          <div className="__navlink">HOME</div>
-          <div className="__navlink">PROGRAM</div>
-          <div className="__navlink">BE A CONTRIBUTOR</div>
-          <div className="__navlink">RESOURCES</div>
+          <div className="__navlink">
+            <Link to={"/"}>HOME</Link>
+          </div>
+          <div className="__navlink">
+            <Link to={"/program"}>PROGRAM</Link>
+          </div>
+          <div className="__navlink">
+            <Link to={"/contributor"}>BE A CONTRIBUTOR</Link>
+          </div>
+          <div className="__navlink">
+            <Link to={"/resources"}>RESOURCES</Link>
+          </div>
+          <div className="__navlink">
+            <Link to={"/login"}>
+              <i className="bi bi-person"></i>
+            </Link>
+          </div>
         </div>
       </div>
     </>
