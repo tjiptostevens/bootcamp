@@ -1,0 +1,36 @@
+.__progressitem {
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.__suggestdetail {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    backdrop-filter: blur(0px);
+    background: rgba(0, 0, 0, 0.0);
+    border-Radius: 0 0 1rem 1rem;
+    width: 100%;
+    transition: all 1s;
+}
+
+.__suggestitem:hover>.__suggestdetail {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 500ms;
+}
