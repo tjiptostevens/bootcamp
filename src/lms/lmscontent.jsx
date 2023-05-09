@@ -14,9 +14,9 @@ const LmsContent = () => {
             height: "90vh",
           }}
         >
-          <div className="col-md-8"></div>
+          <div className="col-md-9"></div>
           <div
-            className="col-md-4"
+            className="col-md-3"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -101,37 +101,40 @@ const LmsContent = () => {
             </div>
             <div className="__suggest">
               <div style={{ paddingBottom: "1rem" }}>Our Suggestion</div>
-
-              <div
-                className="__suggestitem"
-                style={{
-                  aspectRatio: "16/9",
-                  background:
-                    "url(https://images.pexels.com/photos/920381/pexels-photo-920381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center /cover",
-                  borderRadius: "1rem",
-                  position: "relative",
-                }}
-              >
-                <div className="__suggestdetail">
-                  <div>
-                    <b>TITLE</b>
-                    <br />
-                    <i>Subtitle</i>
-                    <br />
-                    Rp. 1.000.000,-
-                  </div>
-                  <div style={{ fontSize: "2rem", display: "block" }}>
-                    <i
-                      className="bi bi-arrow-right-square"
-                      onMouseEnter={(e) => {
-                        e.target.classList.remove("bi-arrow-right-square");
-                        e.target.classList.add("bi-arrow-right-square-fill");
-                      }}
-                      onMouseLeave={(e) => {
-                        e.target.classList.remove("bi-arrow-right-square-fill");
-                        e.target.classList.add("bi-arrow-right-square");
-                      }}
-                    ></i>
+              <div style={{ overflow: "auto" }}>
+                <div
+                  className="__suggestitem"
+                  style={{
+                    aspectRatio: "16/9",
+                    background:
+                      "url(https://images.pexels.com/photos/920381/pexels-photo-920381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center /cover",
+                    borderRadius: "1rem",
+                    position: "relative",
+                  }}
+                >
+                  <div className="__suggestdetail">
+                    <div>
+                      <b>TITLE</b>
+                      <br />
+                      <i>Subtitle</i>
+                      <br />
+                      Rp. 1.000.000,-
+                    </div>
+                    <div style={{ fontSize: "2rem", display: "block" }}>
+                      <i
+                        className="bi bi-arrow-right-square"
+                        onMouseEnter={(e) => {
+                          e.target.classList.remove("bi-arrow-right-square");
+                          e.target.classList.add("bi-arrow-right-square-fill");
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.classList.remove(
+                            "bi-arrow-right-square-fill"
+                          );
+                          e.target.classList.add("bi-arrow-right-square");
+                        }}
+                      ></i>
+                    </div>
                   </div>
                 </div>
               </div>
