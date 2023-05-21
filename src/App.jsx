@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./website/navbar";
 import Hero from "./website/hero";
 import LmsHome from "./lms/lmshome";
+import Login from "./website/login";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <Routes>
         <Route key={crypto.randomUUID()} path={""} element={<Hero />} />
       </Routes> */}
-      <LmsHome />
+      {/* <LmsHome /> */}
+      <Login />
+
       {/* {crypto.randomUUID()} */}
     </>
   );

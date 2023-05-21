@@ -5,9 +5,9 @@ const Hero = () => {
         <div
           className="__herocontainer"
           style={{
-            minHeight: "50vh",
             display: "flex",
             flexDirection: "column",
+            minHeight: "50vh",
             position: "relative",
             background:
               "url(https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)no-repeat center center /cover",

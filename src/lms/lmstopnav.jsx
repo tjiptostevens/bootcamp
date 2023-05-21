@@ -3,10 +3,8 @@ const LmsTopNav = (props) => {
   return (
     <>
       <div
-        className="w-100"
+        className="w-100 __row"
         style={{
-          display: "flex",
-          flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
           height: "6vh",

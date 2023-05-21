@@ -7,19 +7,15 @@ const LmsContent = () => {
       <div className="w-100">
         <LmsTopNav title="Overview" />
         <div
-          className="w-100"
+          className="w-100 __row"
           style={{
-            display: "flex",
-            flexDirection: "row",
             height: "90vh",
           }}
         >
           <div className="col-md-9"></div>
           <div
-            className="col-md-3"
+            className="col-md-3 __column"
             style={{
-              display: "flex",
-              flexDirection: "column",
               justifyContent: "space-between",
               height: "100%",
             }}
@@ -35,10 +31,8 @@ const LmsContent = () => {
                 <div style={{ width: "100%" }}>
                   <b>Digital Marketer 101</b>
                   <div
-                    className="w-100"
+                    className="w-100 __row"
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
                       alignItems: "center",
                       gap: "1rem",
                     }}
@@ -71,10 +65,8 @@ const LmsContent = () => {
                 <div style={{ width: "100%" }}>
                   <b>Digital Marketer 101</b>
                   <div
-                    className="w-100"
+                    className="w-100 __row"
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
                       alignItems: "center",
                       gap: "1rem",
                     }}

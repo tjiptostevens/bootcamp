@@ -5,10 +5,8 @@ const LmsNav = () => {
     <>
       <div className="__sidenav">
         <div
-          className="w-100"
+          className="w-100 __column"
           style={{
-            display: "flex",
-            flexDirection: "column",
             justifyContent: "space-between",
             borderRadius: "1rem",
             background: "#e9e9e9",
