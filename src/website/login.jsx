@@ -1,9 +1,12 @@
+import { useState } from "react";
 import viteLogo from "/vite.svg";
 const Login = () => {
-    const [form, setForm] = useState({})
+  const [form, setForm] = useState({});
   const handleChange = (e) => {
-    let nam = e.target.value
-let val = e.target.value
+    let nam = e.target.name;
+    let val = e.target.value;
+    setForm({ ...form, [nam]: val });
+    console.log(form);
   };
   const handleSubmit = (e) => {
     console.log(e);
@@ -13,8 +16,6 @@ let val = e.target.value
       <div
         className="w-100"
         style={{
-          width: "100vw",
-          height: "100vh",
           overflow: "hidden",
           display: "flex",
           flexDirection: "column",
@@ -22,24 +23,51 @@ let val = e.target.value
           alignItems: "center",
         }}
       >
-        <div className="col-md-4" style={{ padding: "1rem" }}>
+        <div
+          className="col-md-4"
+          style={{ padding: "1rem", maxWidth: "400px" }}
+        >
           <div className="w-100" style={{ textAlign: "center" }}>
-            <img src={viteLogo} alt="logo" style={{ width: "100px" }} />
+            <img src={viteLogo} alt="logo" style={{ width: "70px" }} />
+            <p>SCOLA.education</p>
           </div>
           <form
-            onSubmit={handleSubmit}
+            onSubmit={() => handleSubmit()}
+            method="post"
             style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "flex-start",
+              gap: "1rem",
             }}
           >
-            <input className="form-control" type="text" name="usr" />
-            <input className="form-control" type="password" name="pwd" />
-            <button className="btn btn-primary" type="submit">
-              submit
-            </button>
+            <div className="w-100">
+              <label htmlFor="usr">Username or Email</label>
+              <input
+                className="form-control"
+                type="text"
+                name="usr"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="w-100">
+              <label htmlFor="pwd">Password</label>
+              <input
+                className="form-control"
+                type="password"
+                name="pwd"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="w-100 __row" style={{ gap: "1rem" }}>
+              <button className="btn btn-primary" type="submit">
+                login
+              </button>
+              <button className="btn btn-light" type="submit">
+                sign up
+              </button>
+            </div>
           </form>
         </div>
       </div>

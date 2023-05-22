@@ -12,6 +12,8 @@ const NavBar = (props) => {
           alignItems: "center",
           background: "white",
           borderBottom: "solid 1px blueviolet",
+          maxHeight: "8vh",
+          position: "sticky",
         }}
       >
         <div
@@ -27,7 +29,7 @@ const NavBar = (props) => {
           <a href="https://vitejs.dev" target="_blank">
             <img src={viteLogo} alt="Vite logo" style={{ height: "50px" }} />
           </a>
-          <h1 style={{ margin: "0", padding: "0 15px" }}>B.camp</h1>
+          <h1 style={{ margin: "0", padding: "0 15px" }}>SCOLA.Education</h1>
         </div>
         <div className="__navtoggle" style={{ padding: "15px" }}>
           <i className="bi bi-calendar-plus"></i>
@@ -40,10 +42,10 @@ const NavBar = (props) => {
             <Link to={"/program"}>PROGRAM</Link>
           </div>
           <div className="__navlink">
-            <Link to={"/contributor"}>BE A CONTRIBUTOR</Link>
+            <Link to={"/event"}>EVENT</Link>
           </div>
           <div className="__navlink">
-            <Link to={"/resources"}>RESOURCES</Link>
+            <Link to={"/blog"}>BLOG</Link>
           </div>
           <div className="__navlink">
             <Link to={"/login"}>
