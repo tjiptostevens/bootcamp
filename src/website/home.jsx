@@ -4,12 +4,14 @@ import Promo from "./promo";
 import Program from "./program";
 
 import Footer from "./footer";
+import WhyUs from "./whyus";
 
 const Home = () => {
   return (
     <>
       <div className="__home">
         <Hero />
+        <WhyUs />
         <Promo />
         <Program />
         <Footer />

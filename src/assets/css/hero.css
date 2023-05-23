@@ -3,7 +3,7 @@
 }
 
 .__heroimg {
-    min-height: 50vh;
+    min-height: 70vh;
     background:
         var(--herobg) no-repeat center center /cover;
 }
