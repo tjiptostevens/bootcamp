@@ -10,8 +10,8 @@
 .__promocontent {
     position: absolute;
     inset: 0;
-    gap: 2rem;
-    width: 100%;
+    margin: auto;
+    /* width: 100%; */
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -20,4 +20,5 @@
 .__promocontent .btn {
     font-size: 1.5rem;
     padding: .5rem 2rem;
+    width: 100%;
 }

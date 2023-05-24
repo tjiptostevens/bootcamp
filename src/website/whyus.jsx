@@ -12,7 +12,7 @@ const WhyUs = () => {
               />
               <p>SCOLA hadir untuk membantu</p>
             </div>
-            <div className="__row __whycontent">
+            <div className="row __whycontent">
               <div className="col-md-7">
                 Kamu dengan sebuah bootcamp online berbasis project yang
                 bertujuan untuk perubahan dan upgrade karir demi masa depan yang

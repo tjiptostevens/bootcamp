@@ -10,6 +10,10 @@
     text-align: center;
 }
 
+.__whytitle img {
+    width: 100%;
+}
+
 .__whycontent {
     font-size: 2rem;
     justify-content: center;

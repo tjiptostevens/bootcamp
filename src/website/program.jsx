@@ -40,16 +40,16 @@ const Program = () => {
       <div className="w-100">
         <div className="container">
           <div className="__programcontainer">
-            <div className="w-100 __row __programtitlecontainer">
-              <div className="__programtitle">PROGRAM</div>
-              <div className="__programsubtitle">
+            <div className="w-100 row __programtitlecontainer">
+              <div className="col-md-5 __programtitle">PROGRAM</div>
+              <div className="col-md-7 __programsubtitle">
                 Pilih karir yang menjadi impianmu. Kami akan berusaha semaksimal
                 mungkin memastikan supaya kamu menikmati pembelajaran dan
                 pekerjaan masa depanmu setiap harinya.
               </div>
             </div>
 
-            <div className="__programcontent">
+            <div className="row __programcontent">
               {programData.map((d) => (
                 <div key={d.title} className="col-md-4">
                   <div className="__programitem">
