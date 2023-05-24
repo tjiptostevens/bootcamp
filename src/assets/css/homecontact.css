@@ -1,0 +1,38 @@
+.__contactbg {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+    background: rgb(255, 205, 69) url(https://www.meetnlearn.fi/images/mustard/illustrations/bulbHalf.svg)center center /cover;
+}
+
+.__contactcontainer {
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.__contacttitlecontainer {
+    text-align: right;
+    padding: 50px 0;
+}
+
+.__contacttitle {
+    padding: 50px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(56, 76, 189);
+}
+
+.__contactsubtitle {
+    padding-right: 50px;
+    font-size: 2rem;
+    color: rgb(0 0 0);
+}
+
+.__contactbtn {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    padding-right: 50px;
+}
+
+.__contactcontent {}

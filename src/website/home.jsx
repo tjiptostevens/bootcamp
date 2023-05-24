@@ -2,9 +2,9 @@ import Hero from "./hero";
 import "../assets/css/home.css";
 import Promo from "./promo";
 import Program from "./program";
-
 import Footer from "./footer";
 import WhyUs from "./whyus";
+import Contact from "./contact";
 
 const Home = () => {
   return (
@@ -14,6 +14,7 @@ const Home = () => {
         <WhyUs />
         <Promo />
         <Program />
+        <Contact />
         <Footer />
       </div>
     </>

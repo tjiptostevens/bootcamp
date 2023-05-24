@@ -14,6 +14,8 @@ const NavBar = (props) => {
           borderBottom: "solid 1px blueviolet",
           maxHeight: "8vh",
           position: "sticky",
+          top: "0px",
+          zIndex: "1",
         }}
       >
         <div
@@ -42,10 +44,10 @@ const NavBar = (props) => {
             <Link to={"/program"}>PROGRAM</Link>
           </div>
           <div className="__navlink">
-            <Link to={"/event"}>EVENT</Link>
+            <Link to={"/blog"}>BLOG</Link>
           </div>
           <div className="__navlink">
-            <Link to={"/blog"}>BLOG</Link>
+            <Link to={"/event"}>CONTACT</Link>
           </div>
           <div className="__navlink">
             <Link to={"/login"}>

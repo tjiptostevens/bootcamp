@@ -1,0 +1,95 @@
+.__programcontainer {
+    padding: 50px 0;
+    font-size: 2rem;
+}
+
+.__programtitlecontainer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.__programtitle {
+    padding: 50px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(56, 76, 189);
+}
+
+.__programsubtitle {
+    padding: 50px;
+    width: 45ch;
+    text-align: right;
+}
+
+.__programcontent {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+}
+
+.__programitem {
+    font-size: 1.5rem;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 5px 15px -5px rgb(0 0 0 /.5);
+}
+
+.__progimg {
+    background: var(--progimg) center center / cover;
+    width: 100%;
+    height: 25vh;
+    border-radius: 25px 25px 0 0;
+    /* filter: blur(2px); */
+}
+
+.__progitemcontainer {
+    padding: 1.5rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.__progitemtitle {
+    padding: 1rem 0;
+    border-bottom: solid 1px #e9e9e9;
+}
+
+.__progitemtag {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #fff;
+    padding: 0 0.5rem;
+    position: absolute;
+    top: 23vh;
+    background: rgb(0 0 0 /.5);
+    backdrop-filter: blur(3px);
+    padding: 0.2rem 1rem 0.2rem 0.7rem;
+    border-radius: 0 5px 5px 0;
+
+}
+
+.__progitemsubtitle {
+    padding: 1rem 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.__progitemcontent p {
+    margin: 0;
+}
+
+.__progitembtn {
+    align-items: center;
+}
+
+.__progitemprice {
+    font-size: 1rem;
+    padding: 0 1rem;
+    color: grey;
+}

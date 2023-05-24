@@ -2,11 +2,6 @@
     padding: 15px
 }
 
-.__navcontainer {
-    display: flex;
-    flex-direction: row;
-}
-
 .__navlink {
     padding: 15px;
     font-weight: 100;
@@ -31,8 +26,9 @@
     .__navcontainer {
         display: flex;
         flex-direction: row;
-        padding: 15px
+        padding: 15px;
     }
+
     .__navtoggle {
         display: none;
     }
@@ -43,6 +39,7 @@
         display: none;
         flex-direction: row;
     }
+
     .__navtoggle {
         display: flex;
     }

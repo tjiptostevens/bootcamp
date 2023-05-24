@@ -14,13 +14,16 @@ const Hero = () => {
           ></div>
           <div className="__herotitlecontainer">
             <div className="__row __herotitle">
-              <h1>JADI SEORANG PROFESIONAL</h1>
+              <h1>UPGRADE KARIRMU</h1>
               <button className="btn">
-                Wujudkan karir impianmu <i className="bi bi-chevron-right"></i>
+                Pilih karir impianmu <i className="bi bi-chevron-right"></i>
               </button>
             </div>
             <div className="__herosubtitle">
-              <p>Cukup deposit, bisa belajar dulu program React Developer.</p>
+              <p>
+                Belajar dari nol, tembus industri teknologi yang sulit dan
+                menakutkan.
+              </p>
             </div>
           </div>
         </div>

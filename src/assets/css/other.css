@@ -1,0 +1,4 @@
+.__blur {
+    filter: grayscale(0%) blur(5px);
+    transition: all 1s;
+}
