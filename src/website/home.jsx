@@ -5,6 +5,7 @@ import Program from "./program";
 import Footer from "./footer";
 import WhyUs from "./whyus";
 import Contact from "./contact";
+import Faq from "./faq";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Promo />
         <Program />
         <Contact />
+        <Faq />
         <Footer />
       </div>
     </>

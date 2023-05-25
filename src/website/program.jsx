@@ -75,8 +75,12 @@ const Program = () => {
                           DAFTAR SEKARANG
                         </button>
                         <div className="__progitemprice">
-                          mulai Rp.
-                          {d.price.toLocaleString("en-US")},-
+                          mulai
+                          <br />
+                          <span style={{ fontSize: "1.5rem" }}>
+                            Rp.
+                            {d.price.toLocaleString("en-US")},-
+                          </span>
                         </div>
                       </div>
                     </div>
