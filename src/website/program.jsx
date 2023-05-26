@@ -3,6 +3,16 @@ import { handleBlur } from "../custom/animation";
 
 const programData = [
   {
+    title: "Yuk Belajar Chat GPT",
+    subtitle:
+      "Belajar pakai Chat GPT untuk optimasi bisnis, marketing dan banyak hal lain nya",
+    img: "https://i0.wp.com/www.mlyearning.org/wp-content/uploads/2023/04/Who-Owns-Chat-Gpt.jpg?fit=1280%2C720&ssl=1",
+    duration: "1 Bulan",
+    start: "8 Juni 2023",
+    price: 2499999,
+    batch: "2",
+  },
+  {
     title: "Digital Marketing",
     subtitle:
       "Memasarkan produk secara lebih efisien, dan menjangkau pasar yang lebih luas",
@@ -30,7 +40,7 @@ const programData = [
     duration: "3 Bulan",
     start: "28 Agustus 2023",
     price: 4999999,
-    batch: "2",
+    batch: "3",
   },
 ];
 

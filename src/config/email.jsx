@@ -1,0 +1,7 @@
+const emailAPI =
+  "411E6E50A5BD232C271981B6AB8B8B9406BAC2E918D74E64939AFA63C36FB0EFA60951339B98A8F70FE8B825ED6D4CBE";
+
+const emailUsr = "tjipwork@gmail.com";
+const emailPwd = "7E9D5F2ED6408B98B06159AB4822ECA0BF26";
+const emailSrv = "smtp.elasticemail.com";
+const emailPort = "2525";

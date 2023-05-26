@@ -34,6 +34,7 @@
     border-radius: 25px;
     position: relative;
     box-shadow: 0 5px 15px -5px rgb(0 0 0 /.5);
+    margin: 1rem 0;
 }
 
 .__progimg {
