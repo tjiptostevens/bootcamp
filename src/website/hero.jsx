@@ -4,26 +4,18 @@ const Hero = () => {
   return (
     <>
       <div className="w-100">
-        <div className="__column__herocontainer">
-          <div
-            className="__heroimg"
-            style={{
-              "--herobg":
-                "url(https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
-            }}
-          ></div>
+        <div className="__column __herocontainer">
           <div className=" col-md-7 __herotitlecontainer">
-            <div className="__row __herotitle">
-              <h1>UPGRADE KARIRMU</h1>
-              <button className="btn">
-                Pilih karir impianmu <i className="bi bi-chevron-right"></i>
-              </button>
+            <div className="__herotitle">
+              <p>BINGUNG NGAPAIN?</p>
+              <p>BEKALIN AJA</p>
             </div>
-            <div className="__herosubtitle">
-              <p>
-                Belajar dari nol, tembus industri teknologi yang sulit dan
-                menakutkan.
-              </p>
+
+            <div className="__herobutton">
+              <button className="btn">
+                AMBIL BEKAL KAMU <span></span>
+                <i className="bi bi-chevron-right"></i>
+              </button>
             </div>
           </div>
         </div>

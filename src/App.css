@@ -14,4 +14,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    background: #1e1e1e;
+}
+
+.__ball {
+    width: var(--ballsize);
+    height: var(--ballsize);
+    border-radius: 100%;
+    background: var(--ballcolor);
+    position: fixed;
+    top: var(--bally);
+    left: var(--ballx);
 }

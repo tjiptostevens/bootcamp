@@ -10,12 +10,11 @@ const NavBar = (props) => {
         style={{
           justifyContent: "space-between",
           alignItems: "center",
-          background: "white",
-          borderBottom: "solid 1px blueviolet",
           maxHeight: "8vh",
           position: "sticky",
           top: "0px",
           zIndex: "1",
+          backdropFilter: "blur(100px)",
         }}
       >
         <div
@@ -26,28 +25,30 @@ const NavBar = (props) => {
             justifyContent: "flex-end",
             alignItems: "flex-end",
             lineHeight: "1",
+            padding: "0 15px",
+            fontSize: "3rem",
           }}
         >
           <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} alt="Vite logo" style={{ height: "50px" }} />
+            <span style={{ fontWeight: "100" }}>bekal</span>
+            <span style={{ fontWeight: "900" }}>kerja</span>
           </a>
-          <h1 style={{ margin: "0", padding: "0 15px" }}>SCOLA.Education</h1>
         </div>
         <div className="__navtoggle" style={{ padding: "15px" }}>
           <i className="bi bi-calendar-plus"></i>
         </div>
         <div className="__navcontainer">
           <div className="__navlink">
-            <Link to={"/"}>HOME</Link>
+            <Link to={"/"}>RUMAH</Link>
           </div>
           <div className="__navlink">
-            <Link to={"/program"}>PROGRAM</Link>
+            <Link to={"/program"}>BEKAL</Link>
           </div>
           <div className="__navlink">
             <Link to={"/blog"}>BLOG</Link>
           </div>
           <div className="__navlink">
-            <Link to={"/event"}>CONTACT</Link>
+            <Link to={"/event"}>KONTAK</Link>
           </div>
           <div className="__navlink">
             <Link to={"/login"}>

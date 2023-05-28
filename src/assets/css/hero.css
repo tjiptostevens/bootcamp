@@ -1,61 +1,60 @@
 .__herocontainer {
     position: relative;
+    height: 90vh;
+    /* margin: -50px; */
 }
 
 .__heroimg {
     min-height: 70vh;
-    background:
-        var(--herobg) no-repeat center center /cover;
+
 }
 
 .__herotitlecontainer {
-    margin: 0 auto;
-    background: rgb(255 255 255 / 1);
+    margin: auto auto;
+    inset: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    translate: 0 -80px;
     padding: 0;
-    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.5);
-    border-radius: 7px;
 }
 
 .__herotitle {
-    background: blueviolet;
     color: white;
-    border-radius: 7px 7px 0 0;
     width: 100%;
-    height: 100px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem
+    line-height: 1;
+    padding: 2rem 0
 }
 
-.__herotitle h1 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.__herotitle p {
     padding: 0;
     margin: 0;
+    font-size: 5rem;
+    font-weight: 700;
 }
 
-.__herotitle button {
+.__herobutton button {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    color: blueviolet;
-    background: white;
+    background: transparent;
+    border: solid 1px white;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50px;
+    padding: 1rem 3rem;
+}
+
+.__herobutton button span {
+    width: 150px;
+    display: flex;
+    border: 1px solid white;
+    margin: 0 -20px 0 2rem;
 }
 
 .__herotitle button i {
     margin-left: 1rem
-}
-
-.__herosubtitle {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: white;
-    color: #949494;
 }

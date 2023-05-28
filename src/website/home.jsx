@@ -6,12 +6,14 @@ import Footer from "./footer";
 import WhyUs from "./whyus";
 import Contact from "./contact";
 import Faq from "./faq";
+import Fact from "./fact";
 
 const Home = () => {
   return (
     <>
       <div className="__home">
         <Hero />
+        <Fact />
         <WhyUs />
         <Promo />
         <Program />

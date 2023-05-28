@@ -1,0 +1,13 @@
+.__factcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem
+}
+
+.__factcontainer div {
+    min-height: 500px;
+    background: rgb(0 0 0 / 0.5);
+    border-radius: 5px;
+}

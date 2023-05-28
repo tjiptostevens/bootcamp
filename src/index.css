@@ -1,7 +1,36 @@
+@font-face {
+    font-family: monsera;
+    src: url(./assets/font/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: monsera;
+    src: url(./assets/font/Montserrat-Thin.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: monsera;
+    src: url(./assets/font/Montserrat-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: monsera;
+    src: url(./assets/font/Montserrat-SemiBold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: monsera;
+    src: url(./assets/font/Montserrat-Bold.ttf);
+    font-weight: 900;
+}
+
 #root {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: monsera, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 * {
-    /* outline: 1px dotted grey; */
+    outline: 1px dotted grey;
 }
