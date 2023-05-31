@@ -1,0 +1,34 @@
+.__whatiscontainer {
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.__whatisimg {
+    position: absolute;
+    left: var(--imgleft);
+    right: var(--imgright);
+    top: var(--imgtop);
+}
+
+.__whatisimg img {
+    width: var(--imgwidth);
+    filter: blur(var(--imgblur));
+    rotate: var(--imgrotate);
+}
+
+.__whatistitle {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.__whatissubtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 45ch;
+}

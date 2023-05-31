@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./assets/css/other.css";
@@ -7,34 +7,65 @@ import NavBar from "./website/navbar";
 import Home from "./website/home";
 
 function App() {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+      // console.log(mouseX, mouseY);
+      setPosition({
+        ...position,
+        x: position.x + mouseX,
+        y: position.y + mouseY,
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+  useEffect(() => {
+    const updatePosition = () => {
+      const newX = Math.random() * window.innerWidth;
+      const newY = Math.random() * window.innerHeight;
+      setPosition({ x: newX, y: newY });
+    };
+
+    const interval = setInterval(updatePosition, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div className="__main">
         <div
           className="__ball"
           style={{
-            "--ballsize": "300px",
+            "--ballsize": Math.floor("3000" * Math.random()) + "px",
             "--ballcolor": "#354AE6",
-            "--ballx": Math.ceil(Math.random() * 100) + "%",
-            "--bally": Math.ceil(Math.random() * 100) + "vh",
+            "--ballx": Math.floor(position.x * Math.random()) + "px",
+            "--bally": Math.floor(position.y * Math.random()) + "px",
           }}
         ></div>
         <div
           className="__ball"
           style={{
-            "--ballsize": "600px",
+            "--ballsize": Math.floor("3000" * Math.random()) + "px",
             "--ballcolor": "#0FE3CA",
-            "--ballx": Math.ceil(Math.random() * 100) + "%",
-            "--bally": Math.ceil(Math.random() * 100) + "vh",
+            "--ballx": Math.floor(position.x * Math.random()) + "px",
+            "--bally": Math.floor(position.y * Math.random()) + "px",
           }}
         ></div>
         <div
           className="__ball"
           style={{
-            "--ballsize": "400px",
+            "--ballsize": Math.floor("3000" * Math.random()) + "px",
             "--ballcolor": "#354AE6",
-            "--ballx": Math.ceil(Math.random() * 100) + "%",
-            "--bally": Math.ceil(Math.random() * 100) + "vh",
+            "--ballx": Math.floor(position.x * Math.random()) + "px",
+            "--bally": Math.floor(position.y * Math.random()) + "px",
           }}
         ></div>
         <NavBar />
