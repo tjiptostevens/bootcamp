@@ -3,7 +3,7 @@ import "../assets/css/hero.css";
 const Hero = () => {
   return (
     <>
-      <div className="w-100">
+      <div id="hero" className="w-100">
         <div className="__column __herocontainer">
           <div className=" col-md-7 __herotitlecontainer">
             <div className="__herotitle __fade-top">

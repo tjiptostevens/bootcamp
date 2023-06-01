@@ -3,7 +3,7 @@ import "../assets/css/homecontact.css";
 const Contact = () => {
   return (
     <>
-      <div className="w-100 __contactbg">
+      <div id="kontak" className="w-100 __contactbg">
         <div className="container">
           <div className="__row __contactcontainer">
             <div className="col-md-6 __contactcontent"></div>

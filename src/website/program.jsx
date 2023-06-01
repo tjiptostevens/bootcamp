@@ -50,7 +50,7 @@ const programData = [
 
 const Program = () => {
   return (
-    <div className="w-100">
+    <div id="program" className="w-100">
       <div className="container">
         <div className="__programcontainer">
           <div className="__programtitlecontainer">

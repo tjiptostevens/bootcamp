@@ -8,6 +8,7 @@
 }
 
 .__navlink {
+    display: block;
     padding: 15px;
     font-weight: 100;
     border-bottom: 2px solid transparent;
