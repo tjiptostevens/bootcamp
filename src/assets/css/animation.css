@@ -10,6 +10,10 @@
     animation: bounceTop 1s ease-in-out 0s 1 normal forwards;
 }
 
+.__float {
+    animation: float 6s ease-in-out 0s infinite normal forwards;
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
@@ -73,5 +77,19 @@
     100% {
         animation-timing-function: ease-out;
         transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
     }
 }

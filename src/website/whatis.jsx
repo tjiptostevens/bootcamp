@@ -5,7 +5,7 @@ const WhatIs = () => {
       <div className="container">
         <div className="__whatiscontainer">
           <div
-            className="__whatisimg"
+            className="__whatisimg __float"
             style={{
               "--imgtop": "5px",
               "--imgright": "50px",
@@ -37,7 +37,7 @@ const WhatIs = () => {
         </div>
         <div className="__whatiscontainer">
           <div
-            className="__whatisimg"
+            className="__whatisimg __float"
             style={{
               "--imgtop": "-300px",
               "--imgright": "none",
