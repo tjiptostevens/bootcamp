@@ -42,16 +42,16 @@ const NavBar = (props) => {
         </div>
         <div className="__navcontainer">
           <a href="#hero">
-            <div className="__navlink">RUMAH</div>
+            <div className="__navlink">rumah</div>
           </a>
           <a href="#program">
-            <div className="__navlink">BEKAL</div>
+            <div className="__navlink">bekal</div>
           </a>
           <a href="#blog">
-            <div className="__navlink">BLOG</div>
+            <div className="__navlink">blog</div>
           </a>
           <a href="#kontak">
-            <div className="__navlink">KONTAK</div>
+            <div className="__navlink">kontak</div>
           </a>
           <Link to={"/login"}>
             <div className="__navlink">

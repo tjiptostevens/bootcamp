@@ -28,3 +28,10 @@
     left: var(--ballx);
     transition: all 10s;
 }
+
+.__noisebg {
+    background: var(--noisebg) no-repeat center center/cover;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+}

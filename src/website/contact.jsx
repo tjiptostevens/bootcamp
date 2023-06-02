@@ -3,19 +3,15 @@ import "../assets/css/homecontact.css";
 const Contact = () => {
   return (
     <>
-      <div id="kontak" className="w-100 __contactbg">
+      <div id="kontak" className="w-100">
         <div className="container">
-          <div className="__row __contactcontainer">
-            <div className="col-md-6 __contactcontent"></div>
-            <div className="col-md-6 __contacttitlecontainer">
-              <div className="__contacttitle">KONTAK</div>
-              <div className="__contactsubtitle">
-                Perlu Bantuan? Bingung memilih karir? atau ada pertanyaan? Kami
-                dengan senang hati akan membantu anda.
-              </div>
-              <div className="__contactbtn">
-                <button className="btn __btnblue">PERLU NIH</button>
-              </div>
+          <div className="__contactcontainer">
+            <div className="__contacttitle">kontak</div>
+            <div className="__contactsubtitle">
+              Bingung pilih bekal apa? atau kamu bertanya-tanya?
+            </div>
+            <div className="__contactbutton">
+              <button className="btn">mau nanya</button>
             </div>
           </div>
         </div>
