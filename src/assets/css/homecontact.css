@@ -18,6 +18,7 @@
 
 .__contactsubtitle {
     font-size: clamp(1.2rem, 2vw, 2rem);
+    padding: 50px 0;
 
 }
 

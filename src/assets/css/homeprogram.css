@@ -2,6 +2,7 @@
     padding: 100px 0;
     font-size: clamp(1.2rem, 2vw, 2rem);
     color: white;
+    overflow: hidden;
 }
 
 .__programtitlecontainer {
@@ -21,7 +22,16 @@
 .__programsubtitle {
     font-size: clamp(1.2rem, 2vw, 2rem);
     font-weight: 300;
-    width: 45ch;
+    text-align: center;
+    padding: 50px 2rem;
+}
+
+.__program {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 300;
+    padding: 50px 0;
+
+    /* width: 45ch; */
 }
 
 .__programitemcontainer {
@@ -47,7 +57,7 @@
     padding: 5px 1rem
 }
 
-.__programitemsubtitle {
+.__programitem {
     font-size: 1.2rem;
     font-weight: 100;
     padding: 5px 1rem

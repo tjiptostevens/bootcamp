@@ -2,6 +2,7 @@
     padding: 100px 0;
     font-size: clamp(1.2rem, 2vw, 2rem);
     color: white;
+    overflow: hidden;
 }
 
 .__praktisititle {
@@ -13,7 +14,6 @@
 .__praktisisubtitle {
     font-size: clamp(1.2rem, 2vw, 2rem);
     font-weight: 300;
-    width: 45ch;
     text-align: center;
     padding: 50px 2rem;
 }
