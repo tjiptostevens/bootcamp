@@ -1,0 +1,14 @@
+.__ambilbekalcontainer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    text-align: center;
+}
+
+.__ambilbekaltitle {
+    font-size: clamp(4rem, 40vw, 2rem);
+}

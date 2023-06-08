@@ -2,7 +2,8 @@
     background: blueviolet;
     min-height: 20vh;
     color: white;
-    font-size: 2rem;
+
+    font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 .__footercontent {

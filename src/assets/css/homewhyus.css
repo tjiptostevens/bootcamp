@@ -4,7 +4,7 @@
 }
 
 .__whytitle {
-    font-size: 3rem;
+    font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 700;
     padding: 50px 0;
     text-align: center;
@@ -15,7 +15,7 @@
 }
 
 .__whycontent {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 2vw, 2rem);
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;

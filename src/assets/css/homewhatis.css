@@ -23,12 +23,12 @@
 }
 
 .__whatistitle {
-    font-size: 4rem;
+    font-size: clamp(4rem, 40vw, 2rem);
     font-weight: 700;
 }
 
 .__whatissubtitle {
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 2vw, 2rem);
     font-weight: 300;
     width: 45ch;
 }

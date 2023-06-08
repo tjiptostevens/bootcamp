@@ -9,6 +9,7 @@ import Faq from "./faq";
 import Fact from "./fact";
 import Praktisi from "./praktisi";
 import WhatIs from "./whatis";
+import AmbilBekal from "./ambilbekal";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <Praktisi />
         <WhatIs />
         <Program />
+        <AmbilBekal />
         <Contact />
         <Faq />
         <Footer />
