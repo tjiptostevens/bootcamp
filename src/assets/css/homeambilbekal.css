@@ -13,3 +13,39 @@
     font-size: clamp(3rem, 10vw, 5rem);
     line-height: 1;
 }
+
+.__ambilbekaldate {
+    padding: 50px 0;
+}
+
+.__ambilbekalitem {
+    font-weight: 300;
+
+}
+
+.__ambilbekalitem ul {
+    margin: auto;
+    width: fit-content;
+    list-style: none;
+    text-align: left;
+}
+
+.__ambilbekalbutton {
+    background: #fff;
+    border-radius: 1rem;
+    line-height: 1;
+    width: fit-content;
+    margin: auto;
+    color: black;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+.__ambilbekalbutton p {
+    margin: 0;
+}
+
+.__ambilbekalbutton p b {
+    font-weight: 700;
+    font-size: 2rem;
+}

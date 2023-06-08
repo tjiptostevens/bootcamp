@@ -19,41 +19,32 @@ const faqItem = [
 const Faq = () => {
   return (
     <>
-      <div className="w-100" style={{ padding: "50px 0" }}>
+      <div
+        className="w-100"
+        style={{ padding: "50px 0", position: "relative" }}
+      >
         <div className="container">
-          <div className="row __faqcontainer">
-            <div className="col-md-7">
-              <div className="__faqtitle">Yang paling sering di tanyakan.</div>
-              <div className="__faqcontent">
-                {faqItem.map((d, i) => (
-                  <div className="__faqitem">
-                    <div className="__faqitemquestion">
-                      <label className="form-check-label" for={"faq" + i}>
-                        {d.question}
-                        <i className="bi bi-chevron-down"></i>
-                      </label>
+          <div className="__faqcontainer">
+            <div className="__faqtitle">FAQ</div>
+            <div className="__faqcontent">
+              {faqItem.map((d, i) => (
+                <div className="__faqitem">
+                  <div className="__faqitemquestion">
+                    <label className="form-check-label" for={"faq" + i}>
+                      {d.question}
+                      <i className="bi bi-chevron-down"></i>
+                    </label>
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      name="faq"
+                      id={"faq" + i}
+                    />
 
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="faq"
-                        id={"faq" + i}
-                      />
-
-                      <div className="w-100 __faqitemanswer">{d.answer}</div>
-                    </div>
+                    <div className="w-100 __faqitemanswer">{d.answer}</div>
                   </div>
-                ))}
-              </div>
-            </div>
-            <div className="col-md-5" style={{ overflow: "hidden" }}>
-              <div className="w-100">
-                <img
-                  src="https://info.icei.ac.id/upload/60ff9464c7a1a1.png"
-                  alt=""
-                  style={{ translate: "-15%" }}
-                />
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

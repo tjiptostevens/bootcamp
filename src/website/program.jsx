@@ -1,5 +1,6 @@
 import "../assets/css/homeprogram.css";
 import { handleBlur } from "../custom/animation";
+import { shoppingCart } from "../custom/img";
 
 const programData = [
   {
@@ -50,7 +51,30 @@ const programData = [
 
 const Program = () => {
   return (
-    <div id="program" className="w-100">
+    <div
+      id="program"
+      className="w-100"
+      style={{ position: "relative", overflow: "hidden" }}
+    >
+      <div
+        className="__whatisimg __float"
+        style={{
+          "--imgtop": "50px",
+          "--imgright": "-300px",
+          "--imgleft": "none",
+          zIndex: "-1",
+        }}
+      >
+        <img
+          style={{
+            "--imgwidth": "900px",
+            "--imgblur": "5px",
+            "--imgrotate": "-7deg",
+          }}
+          src={shoppingCart}
+          alt=""
+        />
+      </div>
       <div className="container">
         <div className="__programcontainer">
           <div className="__programtitlecontainer">
@@ -63,7 +87,10 @@ const Program = () => {
           <div className="__programitemcontainer">
             {programData.map((d) => (
               <>
-                <div className="col-md-3 ">
+                <div
+                  className="col-md-4"
+                  style={{ margin: "0", padding: "1rem" }}
+                >
                   <div className="__programitem">
                     <div
                       className="__programhero"
