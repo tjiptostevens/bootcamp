@@ -10,5 +10,6 @@
 }
 
 .__ambilbekaltitle {
-    font-size: clamp(4rem, 40vw, 2rem);
+    font-size: clamp(3rem, 10vw, 5rem);
+    line-height: 1;
 }

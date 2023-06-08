@@ -15,6 +15,7 @@
 .__programtitle {
     font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 700;
+    line-height: 1;
 }
 
 .__programsubtitle {

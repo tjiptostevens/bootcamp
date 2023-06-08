@@ -11,8 +11,9 @@
 
 .__contacttitle {
     padding: 2rem 0;
-    font-size: clamp(4rem, 40vw, 2rem);
+    font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 700;
+    line-height: 1;
 }
 
 .__contactsubtitle {

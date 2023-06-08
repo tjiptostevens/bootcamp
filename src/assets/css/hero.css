@@ -33,6 +33,7 @@
     margin: 0;
     font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 300;
+    line-height: 1;
 }
 
 .__herotitle p b {
