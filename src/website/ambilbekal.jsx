@@ -6,14 +6,15 @@ const AmbilBekal = () => {
       <div
         className="__whatisimg __float"
         style={{
-          "--imgtop": "100px",
+          "--imgtop": "50px",
           "--imgright": "none",
-          "--imgleft": "-450px",
+          "--imgleft": "-350px",
+          zIndex: "-1",
         }}
       >
         <img
           style={{
-            "--imgwidth": "1200px",
+            "--imgwidth": "clamp(70vw,60vw,60vw)",
             "--imgblur": "5px",
             "--imgrotate": "0deg",
           }}

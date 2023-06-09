@@ -1,4 +1,5 @@
 import "../assets/css/homefaq.css";
+import { questionMark } from "../custom/img";
 const faqItem = [
   {
     question: "Apakah ada batasan usia untuk bisa ikut program SCOLA ?",
@@ -23,9 +24,49 @@ const Faq = () => {
         className="w-100"
         style={{ padding: "50px 0", position: "relative" }}
       >
+        <div
+          className="__whatisimg __float"
+          style={{
+            "--imgtop": "5px",
+            "--imgright": "-50px",
+            "--imgleft": "none",
+            zIndex: "-1",
+          }}
+        >
+          <img
+            style={{
+              "--imgwidth": "300px",
+              "--imgblur": "5px",
+              "--imgrotate": "20deg",
+            }}
+            src={questionMark}
+            alt=""
+          />
+        </div>
+        <div
+          className="__whatisimg __float"
+          style={{
+            "--imgtop": "5px",
+            "--imgright": "none",
+            "--imgleft": "-300px",
+            zIndex: "-1",
+          }}
+        >
+          <img
+            style={{
+              "--imgwidth": "clamp(70vw,50vw,50vw)",
+              "--imgblur": "5px",
+              "--imgrotate": "-15deg",
+            }}
+            src={questionMark}
+            alt=""
+          />
+        </div>
         <div className="container">
           <div className="__faqcontainer">
             <div className="__faqtitle">FAQ</div>
+            <div className="__faqsubtitle">Yang paling sering ditanyakan</div>
+
             <div className="col-md-12 __faqcontent">
               {faqItem.map((d, i) => (
                 <div className="__faqitem">

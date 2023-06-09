@@ -1,9 +1,11 @@
 .__home {
     width: 100%;
+    max-width: 100vw;
     height: 100%;
     margin: -50px;
     background: url(../img/sparkling-glitter-texture.png) center center;
     backdrop-filter: blur(100px);
+    overflow: hidden;
 }
 
 .__btnorange {

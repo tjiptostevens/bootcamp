@@ -8,14 +8,14 @@ const Hero = () => {
         <div
           className="__whatisimg __float"
           style={{
-            "--imgtop": "300px",
+            "--imgtop": "200px",
             "--imgright": "none",
             "--imgleft": "-400px",
           }}
         >
           <img
             style={{
-              "--imgwidth": "1200px",
+              "--imgwidth": "clamp(80vw, 70vw, 70vw)",
               "--imgblur": "5px",
               "--imgrotate": "0deg",
             }}
