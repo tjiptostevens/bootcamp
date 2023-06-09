@@ -26,7 +26,7 @@ const Faq = () => {
         <div className="container">
           <div className="__faqcontainer">
             <div className="__faqtitle">FAQ</div>
-            <div className="__faqcontent">
+            <div className="col-md-12 __faqcontent">
               {faqItem.map((d, i) => (
                 <div className="__faqitem">
                   <div className="__faqitemquestion">
