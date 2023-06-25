@@ -1,0 +1,43 @@
+.__logincontainer {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 1rem;
+    background: rgb(255 255 255 / .7);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px -5px rgb(0 0 0 /.5);
+    z-index: 1;
+    opacity: 1;
+    width: min(300px, 250px);
+    transition: all 1;
+}
+
+.__logincontainercollapse {
+    scale: 0;
+    opacity: 0;
+    transition: all 1;
+}
+
+.__logincontainerexpand {
+    scale: 1;
+    opacity: 1;
+    transition: all 1;
+}
+
+.__loginform form {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px
+}
+
+.__loginbutton {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
