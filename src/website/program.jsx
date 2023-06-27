@@ -1,4 +1,5 @@
 import "../assets/css/homeprogram.css";
+import { getFsData } from "../config/firestore";
 import { handleBlur } from "../custom/animation";
 import { shoppingCart } from "../custom/img";
 
@@ -50,12 +51,14 @@ const programData = [
 ];
 
 const Program = () => {
+  const { data } = getFsData("courses", true);
   return (
     <div
       id="program"
       className="w-100"
       style={{ position: "relative", overflow: "hidden" }}
     >
+      {/* {console.log(data)} */}
       <div
         className="__whatisimg __float"
         style={{
@@ -85,34 +88,33 @@ const Program = () => {
             </div>
           </div>
           <div className="__programitemcontainer">
-            {programData.map((d) => (
-              <>
-                <div
-                  className="col-md-4"
-                  style={{ margin: "0", padding: "1rem" }}
-                >
-                  <div className="__programitem">
-                    <div
-                      className="__programhero"
-                      style={{ "--programimg": `url(${d.img})` }}
-                    ></div>
-                    <div className="__programitemtitle">{d.title}</div>
-                    <div className="__programitemsubtitle">{d.subtitle}</div>
-                    <div className="__programitemprice">
-                      <div className="__programdummyprice">
-                        Rp. {d.dummy_price.toLocaleString()},-{" "}
-                        <span className="__redline"></span>
-                      </div>
-                      <div className="__programrealprice">
-                        Rp. {d.price.toLocaleString()},-
-                      </div>
+            {data.map((d) => (
+              <div
+                key={d.id}
+                className="col-md-4"
+                style={{ margin: "0", padding: "1rem" }}
+              >
+                <div className="__programitem">
+                  <div
+                    className="__programhero"
+                    style={{ "--programimg": `url(${d.img})` }}
+                  ></div>
+                  <div className="__programitemtitle">{d.title}</div>
+                  <div className="__programitemsubtitle">{d.subtitle}</div>
+                  <div className="__programitemprice">
+                    <div className="__programdummyprice">
+                      Rp. {d.dummy_price.toLocaleString()},-{" "}
+                      <span className="__redline"></span>
+                    </div>
+                    <div className="__programrealprice">
+                      Rp. {d.price.toLocaleString()},-
                     </div>
                   </div>
-                  <div className="__programbutton">
-                    <button className="btn">beli bekal ini</button>
-                  </div>
                 </div>
-              </>
+                <div className="__programbutton">
+                  <button className="btn">beli bekal ini</button>
+                </div>
+              </div>
             ))}
           </div>
         </div>

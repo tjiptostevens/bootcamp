@@ -49,7 +49,10 @@ const getFsData = (collectionName, id) => {
   useEffect(() => {
     const getFsData = async () => {
       try {
-        const q = query(collection(db, collectionName), where("uid", "==", id));
+        const q = query(
+          collection(db, collectionName),
+          where("isActive", "==", true)
+        );
         const querySnapshot = await getDocs(q);
         let results = [];
         querySnapshot.forEach((doc) => {

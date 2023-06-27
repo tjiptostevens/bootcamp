@@ -1,4 +1,5 @@
 import "../assets/css/homefaq.css";
+import { getFsData } from "../config/firestore";
 import { questionMark } from "../custom/img";
 const faqItem = [
   {
@@ -18,6 +19,8 @@ const faqItem = [
   },
 ];
 const Faq = () => {
+  const { data } = getFsData("faqs", true);
+
   return (
     <>
       <div
@@ -68,10 +71,10 @@ const Faq = () => {
             <div className="__faqsubtitle">Yang paling sering ditanyakan</div>
 
             <div className="col-md-12 __faqcontent">
-              {faqItem.map((d, i) => (
-                <div className="__faqitem">
+              {data.map((d, i) => (
+                <div key={d.id} className="__faqitem">
                   <div className="__faqitemquestion">
-                    <label className="form-check-label" for={"faq" + i}>
+                    <label className="form-check-label" htmlFor={"faq" + i}>
                       {d.question}
                       <i className="bi bi-chevron-down"></i>
                     </label>
