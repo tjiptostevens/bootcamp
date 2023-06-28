@@ -5,6 +5,11 @@ import { logo } from "../custom/img";
 
 const NavBar = (props) => {
   const [activeLink, setActiveLink] = useState(true);
+  const [hash, setHash] = useState("");
+  useEffect(() => {
+    let has = window.location.hash;
+    setHash(has);
+  }, [window.location.hash]);
   return (
     <>
       <div
@@ -40,19 +45,27 @@ const NavBar = (props) => {
         </div>
         <div className="__navcontainer">
           <a href="#hero">
-            <div className="__navlink">rumah</div>
+            <div className={`__navlink${hash === "#hero" ? "active" : ""}`}>
+              rumah
+            </div>
           </a>
-          <a href="#program">
-            <div className="__navlink">bekal</div>
+          <a href="#bekal">
+            <div className={`__navlink${hash === "#bekal" ? "active" : ""}`}>
+              bekal
+            </div>
           </a>
           <a href="#blog">
-            <div className="__navlink">blog</div>
+            <div className={`__navlink${hash === "#blog" ? "active" : ""}`}>
+              blog
+            </div>
           </a>
           <a href="#kontak">
-            <div className="__navlink">kontak</div>
+            <div className={`__navlink${hash === "#kontak" ? "active" : ""}`}>
+              kontak
+            </div>
           </a>
           <a href="#">
-            <div className="__navlink">
+            <div className={`__navlink`}>
               <i className="bi bi-person"></i>
             </div>
           </a>

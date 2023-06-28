@@ -54,7 +54,7 @@ const Program = () => {
   const { data } = getFsData("courses", true);
   return (
     <div
-      id="program"
+      id="bekal"
       className="w-100"
       style={{ position: "relative", overflow: "hidden" }}
     >

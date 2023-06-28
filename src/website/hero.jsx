@@ -33,13 +33,14 @@ const Hero = () => {
                 gaji <b>upgrade</b>
               </p>
             </div>
-
-            <div className="__herobutton __fade-top">
-              <button className="btn">
-                ambil bekal kamu <span></span>
-                <i className="bi bi-chevron-right"></i>
-              </button>
-            </div>
+            <a href="#bekal" style={{ textDecoration: "none", color: "white" }}>
+              <div className="__herobutton __fade-top">
+                <button className="btn">
+                  ambil bekal kamu <span></span>
+                  <i className="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </a>
           </div>
         </div>
       </div>
