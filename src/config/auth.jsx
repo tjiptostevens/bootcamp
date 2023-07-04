@@ -8,7 +8,7 @@ import {
   sendPasswordResetEmail,
   signOut,
 } from "firebase/auth";
-import { writeData } from "./firereal";
+import { addFsData, setFsData, updateFsData } from "./firestore";
 const auth = getAuth(app);
 
 const signInWithGoogle = async () => {
@@ -22,7 +22,7 @@ const signInWithGoogle = async () => {
       photoURL: user.user.photoURL,
       isOnline: true,
     };
-    await writeData("users", user.user.uid, data);
+    await setFsData("users", user.user.uid, data);
   } catch (error) {
     console.log("error code : " + error.code);
     console.log("error message : " + error.message);
@@ -39,7 +39,7 @@ const registerWithEmailPassword = async (email, password) => {
       photoURL: user.user.photoURL,
       isOnline: false,
     };
-    await writeData("users", user.user.uid, data);
+    await setFsData("users", user.user.uid, data);
     return user;
   } catch (error) {
     console.log("error code : " + error.code);
@@ -55,10 +55,7 @@ const loginWithEmailPassword = async (email, password) => {
     let data = {
       isOnline: true,
     };
-    // await updateFsData("users", user.uid, data);
-    // await updateDoc(doc(db, "users", user.user.uid), {
-    //   isOnline: true,
-    // });
+    await updateFsData("users", user.uid, data);
     return user;
   } catch (error) {
     console.log("error code : " + error.code);
@@ -84,10 +81,7 @@ const logout = async () => {
     let data = {
       isOnline: false,
     };
-    // await updateFsData("users", user.uid, data);
-    // await updateDoc(doc(db, "users", user.user.uid), {
-    //   isOnline: false,
-    // });
+    await updateFsData("users", user.uid, data);
     console.log("user : " + user);
   } catch (error) {
     console.log("error code : " + error.code);

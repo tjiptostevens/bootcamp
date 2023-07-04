@@ -2,14 +2,19 @@ import "../assets/css/navbar.css";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { logo } from "../custom/img";
+import Login from "./login";
 
 const NavBar = (props) => {
-  const [activeLink, setActiveLink] = useState(true);
+  const [login, setLogin] = useState(true);
   const [hash, setHash] = useState("");
   useEffect(() => {
     let has = window.location.hash;
     setHash(has);
   }, [window.location.hash]);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setLogin(!login);
+  };
   return (
     <>
       <div
@@ -45,7 +50,11 @@ const NavBar = (props) => {
         </div>
         <div className="__navcontainer">
           <a href="#hero">
-            <div className={`__navlink${hash === "#hero" ? "active" : ""}`}>
+            <div
+              className={`__navlink${
+                hash === "#hero" || hash === "" ? "active" : ""
+              }`}
+            >
               rumah
             </div>
           </a>
@@ -64,11 +73,12 @@ const NavBar = (props) => {
               kontak
             </div>
           </a>
-          <a href="#">
-            <div className={`__navlink`}>
+          <a href="#login" onClick={handleLogin}>
+            <div className={`__navlink${hash === "#login" ? "active" : ""}`}>
               <i className="bi bi-person"></i>
             </div>
           </a>
+          <Login expand={login} />
         </div>
       </div>
     </>

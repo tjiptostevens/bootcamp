@@ -1,28 +1,40 @@
 .__logincontainer {
     position: absolute;
-    top: 50px;
-    right: 0;
+    top: -100px;
+    right: -100px;
     padding: 1rem;
-    background: rgb(255 255 255 / .7);
+    background: rgb(0 0 0 / .3);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    scale: 0;
+    width: min(300px, 250px);
+    transition: all 1s;
+}
+
+.__logincontainercollapse {
+    scale: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.__logincontainerexpand {
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    padding: 1rem;
+    background: rgb(0 0 0 / .3);
     backdrop-filter: blur(15px);
     border-radius: 5px;
     box-shadow: 0 5px 15px -5px rgb(0 0 0 /.5);
     z-index: 1;
     opacity: 1;
     width: min(300px, 250px);
-    transition: all 1;
-}
-
-.__logincontainercollapse {
-    scale: 0;
-    opacity: 0;
-    transition: all 1;
-}
-
-.__logincontainerexpand {
     scale: 1;
-    opacity: 1;
-    transition: all 1;
+    outline: solid 2px rgb(255 255 255 /.5);
+    outline-offset: 3px;
+    transition: all 1s;
 }
 
 .__loginform form {

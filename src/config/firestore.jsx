@@ -47,7 +47,7 @@ const getFsData = (collectionName, id) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const getFsData = async () => {
+    const getData = async () => {
       try {
         const q = query(
           collection(db, collectionName),
@@ -70,7 +70,7 @@ const getFsData = (collectionName, id) => {
       }
     };
 
-    getFsData();
+    getData();
   }, [collectionName, id]);
 
   return { data };

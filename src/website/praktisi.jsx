@@ -1,8 +1,10 @@
 import "../assets/css/homepraktisi.css";
+import { getFsData } from "../config/firestore";
 import useFetch from "../custom/useFetch";
 
 const Praktisi = () => {
-  const { data } = useFetch("https://dummyjson.com/users");
+  // const { data } = useFetch("https://dummyjson.com/users");
+  const { data } = getFsData("praktisi", true);
 
   return (
     <div className="w-100">
@@ -26,37 +28,32 @@ const Praktisi = () => {
             </div>
           </div>
           <div className="w-100 __praktisiitemcontainer">
-            {data.users &&
-              data.users
-                .filter((f) =>
-                  f.company.title.toLowerCase().includes("engineer")
-                )
-                .filter((f, idx) => idx < 3)
-                .map((d) => (
-                  <>
-                    <div className="col-md-3 __praktisiitem">
-                      <div
-                        className="__praktisiimg"
-                        style={{
-                          "--praktisiimg": `url(${d.image})`,
-                          backgroundColor: "#e9e9e9",
-                        }}
-                      ></div>
-                      <div className="__praktisiname">
-                        <p>
-                          <b>{d.firstName}</b>
-                          <br />
-                          {d.lastName}
-                        </p>
-                      </div>
-                      {/* <div className="__praktisifirstname">{d.firstName}</div>
-                      <div className="__praktisilastname">{d.lastName}</div> */}
-                      <div className="__praktisioccupation">
-                        {d.company.title} on {d.domain}
-                      </div>
+            {data &&
+              data.map((d) => (
+                <>
+                  <div className="col-md-3 __praktisiitem">
+                    <div
+                      className="__praktisiimg"
+                      style={{
+                        "--praktisiimg": `url(${d.image})`,
+                        backgroundColor: "#e9e9e9",
+                      }}
+                    ></div>
+                    <div className="__praktisiname">
+                      <p>
+                        <b>{d.firstName}</b>
+                        <br />
+                        {d.lastName}
+                      </p>
                     </div>
-                  </>
-                ))}
+                    {/* <div className="__praktisifirstname">{d.firstName}</div>
+                      <div className="__praktisilastname">{d.lastName}</div> */}
+                    <div className="__praktisioccupation">
+                      {d.title} on {d.company}
+                    </div>
+                  </div>
+                </>
+              ))}
           </div>
         </div>
       </div>

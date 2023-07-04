@@ -120,5 +120,7 @@
 
 .__programbutton button:hover {
     box-shadow: 0 0 30px 0 rgb(255 255 255 /.5);
+    outline: solid 2px rgb(255 255 255 /.5);
+    outline-offset: 5px;
     transition: box-shadow 1;
 }
