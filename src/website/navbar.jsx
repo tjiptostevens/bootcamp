@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { logo } from "../custom/img";
 import Login from "./login";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../config/auth";
+import NavbarSub from "./navbarsub";
 
 const NavBar = (props) => {
-  const [login, setLogin] = useState(true);
+  const [user] = useAuthState(auth);
+  const [login, setLogin] = useState(false);
   const [hash, setHash] = useState("");
   useEffect(() => {
     let has = window.location.hash;
@@ -17,6 +21,7 @@ const NavBar = (props) => {
   };
   return (
     <>
+      {console.log(user)}
       <div
         className="w-100 __row"
         style={{
@@ -73,12 +78,34 @@ const NavBar = (props) => {
               kontak
             </div>
           </a>
-          <a href="#login" onClick={handleLogin}>
-            <div className={`__navlink${hash === "#login" ? "active" : ""}`}>
-              <i className="bi bi-person"></i>
+          {user ? (
+            <div style={{ padding: "15px", position: "relative" }}>
+              <div
+                className={`__navimg${login ? "active" : ""}`}
+                onClick={handleLogin}
+              >
+                <img
+                  src={user.photoURL}
+                  alt={user.displayName[0]}
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "5px",
+                  }}
+                />
+              </div>
+              <NavbarSub expand={login} />
             </div>
-          </a>
-          <Login expand={login} />
+          ) : (
+            <>
+              <a href="#login" onClick={handleLogin}>
+                <div className={`__navlink${login ? "active" : ""}`}>
+                  <i className="bi bi-person"></i>
+                </div>
+              </a>
+              <Login expand={login} />
+            </>
+          )}
         </div>
       </div>
     </>
