@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./assets/css/other.css";
 import "./assets/css/animation.css";
-import noise from "./assets/img/sparkling-glitter-texture.png";
 import NavBar from "./website/navbar";
 import Home from "./website/home";
 

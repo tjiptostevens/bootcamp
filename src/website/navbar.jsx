@@ -79,7 +79,30 @@ const NavBar = (props) => {
             </div>
           </a>
           {user ? (
-            <div style={{ padding: "15px", position: "relative" }}>
+            <div
+              style={{
+                padding: "15px",
+                position: "relative",
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div
+                className="__bentobox"
+                style={{
+                  position: "relative",
+                  width: "30px",
+                  height: "30px",
+                  color: "white",
+                  padding: "5px 15px",
+                  marginRight: "25px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <i className="bi bi-basket" style={{ fontSize: "22px" }}></i>
+              </div>
               <div
                 className={`__navimg${login ? "active" : ""}`}
                 onClick={handleLogin}
@@ -94,6 +117,7 @@ const NavBar = (props) => {
                   }}
                 />
               </div>
+
               <NavbarSub expand={login} />
             </div>
           ) : (
