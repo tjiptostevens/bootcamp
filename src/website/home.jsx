@@ -12,7 +12,12 @@ import AmbilBekal from "./ambilbekal";
 const Home = () => {
   return (
     <>
-      <div className="__home">
+      <div
+        className="__home"
+        style={{
+          "--noisebg": "url(./assets/img/sparkling-glitter-texture.png)",
+        }}
+      >
         <Hero />
         <Fact />
         <Praktisi />
