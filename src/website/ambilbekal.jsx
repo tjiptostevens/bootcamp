@@ -1,8 +1,10 @@
 import "../assets/css/homeambilbekal.css";
+import { LongDate, ShortDate } from "../custom/dateFormatter";
 import { bullsEye, exlamation } from "../custom/img";
-const AmbilBekal = () => {
+const AmbilBekal = ({ data }) => {
   return (
     <div className="w-100" style={{ position: "relative", overflow: "hidden" }}>
+      {console.log(data)}
       <div
         className="__whatisimg __float"
         style={{
@@ -27,16 +29,18 @@ const AmbilBekal = () => {
           <div className="w-100 __ambilbekaltitle">
             <b>ambil</b>bekal
           </div>
-          <div className="w-100 __ambilbekaldate">
-            📅 Saturday | June, 10<sup>th</sup> 2023
-          </div>
-          <div className="w-100 __ambilbekalitem">
-            <ul>
-              <li>⏰ 19.00-20.00 | DIGITAL MARKETING #7</li>
-              <li>⏰ 20.00-21.00 | WEB DEVELOPER #5</li>
-              <li>⏰ 21.00-22.00 | REACT DEVELOPER #2</li>
-            </ul>
-          </div>
+          {data.map((d) => (
+            <div key={d.id}>
+              <div className="w-100 __ambilbekaldate">{d.title}</div>
+              <div className="w-100 __ambilbekalitem">
+                <ul>
+                  <li>⏰ start : {LongDate(d.start)}</li>
+                  <li>⏰ end : {LongDate(d.end)}</li>
+                </ul>
+              </div>
+            </div>
+          ))}
+
           <div
             className="w-100"
             style={{ textAlign: "center", padding: "50px 0" }}

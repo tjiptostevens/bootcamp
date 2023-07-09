@@ -6,7 +6,6 @@ import Faq from "./faq";
 import Fact from "./fact";
 import Praktisi from "./praktisi";
 import WhatIs from "./whatis";
-import AmbilBekal from "./ambilbekal";
 
 const Main = () => {
   return (
@@ -16,7 +15,6 @@ const Main = () => {
       <Praktisi />
       <WhatIs />
       <Program />
-      <AmbilBekal />
       <Contact />
       <Faq />
       <Footer />

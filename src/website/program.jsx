@@ -3,6 +3,7 @@ import { getFsData } from "../config/firestore";
 import { handleBlur } from "../custom/animation";
 import { shoppingCart } from "../custom/img";
 import ProgramComp from "./programcomp";
+import AmbilBekal from "./ambilbekal";
 
 const Program = () => {
   const { data } = getFsData("courses", true);
@@ -48,6 +49,8 @@ const Program = () => {
           </div>
         </div>
       </div>
+
+      <AmbilBekal data={data} />
     </div>
   );
 };

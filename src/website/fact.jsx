@@ -32,7 +32,7 @@ const Fact = () => {
                     <li>belajar dengan basis project dan studi kasus</li>
                     <li>
                       komunitas dengan kesempatan yang tak terbatas untuk saling
-                      berbagi
+                      berbagi antar member
                     </li>
                     <li>support professional karir</li>
                   </ul>
