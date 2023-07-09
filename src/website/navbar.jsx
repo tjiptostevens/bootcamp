@@ -26,7 +26,6 @@ const NavBar = (props) => {
   };
   return (
     <>
-      {console.log(user)}
       <div
         className="w-100 __row"
         style={{
@@ -59,7 +58,7 @@ const NavBar = (props) => {
           <i className="bi bi-calendar-plus"></i>
         </div>
         <div className="__navcontainer">
-          <a href="#hero">
+          <a href="/#hero">
             <div
               className={`__navlink${
                 hash === "#hero" || hash === "" ? "active" : ""
@@ -68,17 +67,17 @@ const NavBar = (props) => {
               rumah
             </div>
           </a>
-          <a href="#bekal">
+          <a href="/#bekal">
             <div className={`__navlink${hash === "#bekal" ? "active" : ""}`}>
               bekal
             </div>
           </a>
-          <a href="#blog">
+          <a href="/#blog">
             <div className={`__navlink${hash === "#blog" ? "active" : ""}`}>
               blog
             </div>
           </a>
-          <a href="#kontak">
+          <a href="/#kontak">
             <div className={`__navlink${hash === "#kontak" ? "active" : ""}`}>
               kontak
             </div>
@@ -105,7 +104,6 @@ const NavBar = (props) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    position: "relative",
                   }}
                 >
                   <i className="bi bi-basket" style={{ fontSize: "22px" }}></i>

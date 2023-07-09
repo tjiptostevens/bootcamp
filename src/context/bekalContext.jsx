@@ -3,8 +3,8 @@ import { getFsData } from "../config/firestore";
 
 const BekalContext = createContext(null);
 const getDefaultCart = () => {
-  const { data } = getFsData("courses", true);
   let cart = {};
+  const { data } = getFsData("courses", true);
   for (let i = 0; i < data.length; i++) {
     const { id } = data[i];
     cart[id] = false;
@@ -20,7 +20,6 @@ const BekalContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: !prev[itemId] }));
   };
   const contextValue = { cartItems, addToCart, removeFromCart };
-  console.log(cartItems);
   return (
     <BekalContext.Provider value={contextValue}>
       {props.children}

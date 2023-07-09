@@ -34,7 +34,7 @@ const Praktisi = () => {
             >
               {data &&
                 data.map((d) => (
-                  <div className="col-md-3 __praktisiitem">
+                  <div key={d.id} className="col-md-3 __praktisiitem">
                     <div
                       className="w-100 __praktisiimg"
                       style={{

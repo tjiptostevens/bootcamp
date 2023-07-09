@@ -43,7 +43,7 @@ const Program = () => {
           </div>
           <div className="__programitemcontainer">
             {data.map((d) => (
-              <ProgramComp data={d} />
+              <ProgramComp key={crypto.randomUUID()} data={d} />
             ))}
           </div>
         </div>

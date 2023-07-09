@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { BekalContext } from "../context/bekalContext";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../config/auth";
 
 const ProgramComp = ({ data }) => {
+  const [user] = useAuthState(auth);
   const { addToCart, cartItems } = useContext(BekalContext);
   const cartItem = cartItems[data.id];
   const handleAddToCart = () => {
-    addToCart(data.id);
+    if (user) {
+      addToCart(data.id);
+    }
   };
   return (
     <div
