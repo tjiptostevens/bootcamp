@@ -4,7 +4,7 @@ const Footer = () => {
     <>
       <div className="w-100">
         <div className="__copyright">
-          copyright 2023. bekal<b>kerja</b>
+          copyright 2023. bekal<b>kerja</b>. | <i>+6283846864486</i>
         </div>
       </div>
     </>
