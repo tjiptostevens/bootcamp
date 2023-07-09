@@ -1,6 +1,6 @@
 import "../assets/css/homeambilbekal.css";
-import { LongDate, ShortDate } from "../custom/dateFormatter";
-import { bullsEye, exlamation } from "../custom/img";
+import { LongDate } from "../custom/dateFormatter";
+import { bentobox, exlamation } from "../custom/img";
 const AmbilBekal = ({ data }) => {
   return (
     <div className="w-100" style={{ position: "relative", overflow: "hidden" }}>
@@ -20,7 +20,7 @@ const AmbilBekal = ({ data }) => {
             "--imgblur": "5px",
             "--imgrotate": "0deg",
           }}
-          src={bullsEye}
+          src={bentobox}
           alt=""
         />
       </div>

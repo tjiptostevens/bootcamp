@@ -10,6 +10,7 @@ const bullsEye = "./assets/icon/bullseye.png";
 const questionMark = "./assets/icon/questionmark.png";
 
 const exlamation = "./assets/icon/exlamationmark.png";
+const bentobox = "./assets/icon/bentobox.png";
 
 export {
   logo,
@@ -19,4 +20,5 @@ export {
   bullsEye,
   questionMark,
   exlamation,
+  bentobox,
 };
