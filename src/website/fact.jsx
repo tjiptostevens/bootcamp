@@ -5,7 +5,7 @@ const Fact = () => {
     <>
       <div className="w-100">
         <div className="container">
-          <div className="__factcontainer">
+          <div className="row col-md-12 __factcontainer">
             <div className="col-md-6 __factcontaineritem">
               <div className="w-100 __facttitle">
                 belajar <b>ditempat lain</b>

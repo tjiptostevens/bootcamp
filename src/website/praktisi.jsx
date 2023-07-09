@@ -27,13 +27,16 @@ const Praktisi = () => {
               pengalamannya diberbagai perusahaan Top Global.
             </div>
           </div>
-          <div className="w-100 __praktisiitemcontainer">
-            {data &&
-              data.map((d) => (
-                <>
+          <div className="w-100 ">
+            <div
+              className="row col-md-12 __praktisiitemcontainer"
+              style={{ margin: "0", padding: "0" }}
+            >
+              {data &&
+                data.map((d) => (
                   <div className="col-md-3 __praktisiitem">
                     <div
-                      className="__praktisiimg"
+                      className="w-100 __praktisiimg"
                       style={{
                         "--praktisiimg": `url(${d.image})`,
                         backgroundColor: "#e9e9e9",
@@ -52,8 +55,8 @@ const Praktisi = () => {
                       {d.title} on {d.company}
                     </div>
                   </div>
-                </>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
       </div>

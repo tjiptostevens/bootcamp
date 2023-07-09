@@ -1,13 +1,18 @@
 import "../assets/css/navbar.css";
-import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useRef, useState } from "react";
 import { logo } from "../custom/img";
 import Login from "./login";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../config/auth";
 import NavbarSub from "./navbarsub";
+import { BekalContext } from "../context/bekalContext";
 
 const NavBar = (props) => {
+  const { cartItems } = useContext(BekalContext);
+  const countCartItems = Object.values(cartItems).filter(
+    (value) => value === true
+  ).length;
   const [user] = useAuthState(auth);
   const [login, setLogin] = useState(false);
   const [hash, setHash] = useState("");
@@ -87,22 +92,47 @@ const NavBar = (props) => {
                 flexDirection: "row",
               }}
             >
-              <div
-                className="__bentobox"
-                style={{
-                  position: "relative",
-                  width: "30px",
-                  height: "30px",
-                  color: "white",
-                  padding: "5px 15px",
-                  marginRight: "25px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <i className="bi bi-basket" style={{ fontSize: "22px" }}></i>
-              </div>
+              <NavLink to="/cart">
+                <div
+                  className="__bentobox"
+                  style={{
+                    position: "relative",
+                    width: "30px",
+                    height: "30px",
+                    color: "white",
+                    padding: "5px 15px",
+                    marginRight: "25px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "relative",
+                  }}
+                >
+                  <i className="bi bi-basket" style={{ fontSize: "22px" }}></i>
+                  {countCartItems === 0 ? (
+                    ""
+                  ) : (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "-5px",
+                        right: "-10px",
+                        background: "crimson",
+                        borderRadius: "5px",
+                        color: "white",
+                        width: "15px",
+                        height: "15px",
+                        fontSize: "10px",
+                        fontWeight: "500",
+                        textAlign: "center",
+                        border: "solid 1px white",
+                      }}
+                    >
+                      {countCartItems}
+                    </div>
+                  )}
+                </div>
+              </NavLink>
               <div
                 className={`__navimg${login ? "active" : ""}`}
                 onClick={handleLogin}

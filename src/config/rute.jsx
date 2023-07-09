@@ -1,27 +1,22 @@
-import Dash from "../dashboard/dash";
-import Home from "../website/home";
-import Login from "../website/login";
+import Cart from "../website/cart/cart";
+import Main from "../website/main";
 
 const rute = {
   web: [
     {
       path: "/",
-      element: <Home />,
+      element: <Main />,
     },
 
     {
-      path: "/login",
-      element: <Login />,
+      path: "/cart",
+      element: <Cart />,
     },
   ],
   dash: [
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/d",
-      element: <Dash />,
+      element: <Main />,
     },
   ],
 };

@@ -1,0 +1,12 @@
+.__cartcontainer {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px
+}
+
+.__cartcontainer .container {
+    padding: 50px
+}

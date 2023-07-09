@@ -1,13 +1,7 @@
-import Hero from "./hero";
 import "../assets/css/home.css";
-import Program from "./program";
-import Footer from "./footer";
-import Contact from "./contact";
-import Faq from "./faq";
-import Fact from "./fact";
-import Praktisi from "./praktisi";
-import WhatIs from "./whatis";
-import AmbilBekal from "./ambilbekal";
+import { rute } from "../config/rute";
+
+import { Routes, Route } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,15 +12,17 @@ const Home = () => {
           "--noisebg": "url(./assets/img/sparkling-glitter-texture.png)",
         }}
       >
-        <Hero />
-        <Fact />
-        <Praktisi />
-        <WhatIs />
-        <Program />
-        <AmbilBekal />
-        <Contact />
-        <Faq />
-        <Footer />
+        <Routes>
+          {rute.web.map((route) => (
+            <Route
+              exact
+              key={route.path}
+              path={route.path}
+              element={route.element}
+            />
+          ))}
+          {/* <Route key={crypto.randomUUID()} path={""} element={<Home />} /> */}
+        </Routes>
       </div>
     </>
   );

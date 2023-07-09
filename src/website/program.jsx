@@ -2,6 +2,7 @@ import "../assets/css/homeprogram.css";
 import { getFsData } from "../config/firestore";
 import { handleBlur } from "../custom/animation";
 import { shoppingCart } from "../custom/img";
+import ProgramComp from "./programcomp";
 
 const Program = () => {
   const { data } = getFsData("courses", true);
@@ -42,32 +43,7 @@ const Program = () => {
           </div>
           <div className="__programitemcontainer">
             {data.map((d) => (
-              <div
-                key={d.id}
-                className="col-md-4"
-                style={{ margin: "0", padding: "1rem" }}
-              >
-                <div className="__programitem">
-                  <div
-                    className="__programhero"
-                    style={{ "--programimg": `url(${d.img})` }}
-                  ></div>
-                  <div className="__programitemtitle">{d.title}</div>
-                  <div className="__programitemsubtitle">{d.subtitle}</div>
-                  <div className="__programitemprice">
-                    <div className="__programdummyprice">
-                      Rp. {d.dummy_price.toLocaleString()},-{" "}
-                      <span className="__redline"></span>
-                    </div>
-                    <div className="__programrealprice">
-                      Rp. {d.price.toLocaleString()},-
-                    </div>
-                  </div>
-                </div>
-                <div className="__programbutton">
-                  <button className="btn">beli bekal ini</button>
-                </div>
-              </div>
+              <ProgramComp data={d} />
             ))}
           </div>
         </div>

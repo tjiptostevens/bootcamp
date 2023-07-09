@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./assets/css/other.css";
 import "./assets/css/animation.css";
 import NavBar from "./website/navbar";
 import Home from "./website/home";
+import { BekalContextProvider } from "./context/bekalContext";
 
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -68,10 +68,10 @@ function App() {
             "--bally": Math.floor(position.y * Math.random()) + "px",
           }}
         ></div>
-        <NavBar />
-        <Routes>
-          <Route key={crypto.randomUUID()} path={""} element={<Home />} />
-        </Routes>
+        <BekalContextProvider>
+          <NavBar />
+          <Home />
+        </BekalContextProvider>
         {/* <LmsHome /> */}
         {/* <Login /> */}
         {/* {crypto.randomUUID()} */}
