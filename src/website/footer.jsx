@@ -8,7 +8,16 @@ const Footer = () => {
           copyright 2023.{" "}
           <img src={logo} style={{ height: "20px", margin: "0 0 0 0.5rem" }} />.{" "}
           <span style={{ margin: "0 1rem" }}>|</span>
-          <i>+6283846864486</i>
+          <a
+            href="https://wa.me/6283846864486"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <i
+              className="bi bi-whatsapp"
+              style={{ margin: "0 0.5rem 0 0" }}
+            ></i>
+            <i>+6283846864486</i>
+          </a>
         </div>
       </div>
     </>
