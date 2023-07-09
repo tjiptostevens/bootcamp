@@ -28,7 +28,7 @@ const Cart = () => {
           <div className="row  w-100 align-item-center">
             <div className="col-auto __programbutton">
               <button className="btn" onClick={handleCheckOut}>
-                bawa pulang
+                bayar bekal
               </button>
             </div>
             <div className="col-auto " style={{ padding: "25px 0" }}>

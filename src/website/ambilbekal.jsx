@@ -8,7 +8,7 @@ const AmbilBekal = ({ data }) => {
       <div
         className="__whatisimg __float"
         style={{
-          "--imgtop": "50px",
+          "--imgtop": "-20px",
           "--imgright": "none",
           "--imgleft": "-350px",
           zIndex: "-1",
@@ -31,11 +31,14 @@ const AmbilBekal = ({ data }) => {
           </div>
           {data.map((d) => (
             <div key={d.id}>
-              <div className="w-100 __ambilbekaldate">{d.title}</div>
+              <div className="w-100 __ambilbekaldate"></div>
               <div className="w-100 __ambilbekalitem">
                 <ul>
-                  <li>⏰ start : {LongDate(d.start)}</li>
-                  <li>⏰ end : {LongDate(d.end)}</li>
+                  <li>
+                    ⏰ {LongDate(d.start)}
+                    <span style={{ margin: "0 1rem" }}>|</span>
+                    {d.title}
+                  </li>
                 </ul>
               </div>
             </div>

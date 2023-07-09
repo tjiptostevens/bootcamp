@@ -21,7 +21,7 @@ const CartItem = ({ data }) => {
             Rp. {data.price.toLocaleString()},-
           </div>
           <button className="btn btn-light" onClick={handleAddToCart}>
-            batalkan
+            ganti bekal
           </button>
         </div>
       </div>

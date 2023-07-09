@@ -38,7 +38,7 @@ const ProgramComp = ({ data }) => {
 
       <div className="__programbutton" onClick={handleAddToCart}>
         <button className="btn">
-          {cartItem ? "kembalikan bekal ini" : "beli bekal ini"}
+          {cartItem ? "ganti bekal" : "ambil bekal"}
         </button>
       </div>
     </div>
