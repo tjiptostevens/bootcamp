@@ -10,9 +10,11 @@ const Contact = () => {
             <div className="__contactsubtitle">
               Bingung pilih bekal apa? atau kamu bertanya-tanya?
             </div>
-            <div className="__contactbutton">
-              <button className="btn">mau nanya</button>
-            </div>
+            <a href="mailto:tanya@bekalkerja.com">
+              <div className="__contactbutton">
+                <button className="btn">mau nanya</button>
+              </div>
+            </a>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const AmbilBekal = ({ data }) => {
       >
         <img
           style={{
-            "--imgwidth": "clamp(70vw,60vw,60vw)",
+            "--imgwidth": "clamp(60vw,50vw,50vw)",
             "--imgblur": "5px",
             "--imgrotate": "0deg",
           }}
