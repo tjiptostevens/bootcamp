@@ -9,7 +9,7 @@ const CartItem = ({ data }) => {
   };
   return (
     <div className="w-100">
-      {JSON.stringify(data)}
+      {/* {JSON.stringify(data)} */}
       <div className="__cartitemcontainer">
         <div
           className="col-md-3 __cartimg"
