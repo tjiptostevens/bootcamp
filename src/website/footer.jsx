@@ -10,6 +10,7 @@ const Footer = () => {
           <span style={{ margin: "0 1rem" }}>|</span>
           <a
             href="https://wa.me/6283846864486"
+            target="_blank"
             style={{ textDecoration: "none", color: "white" }}
           >
             <i
