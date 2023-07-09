@@ -4,7 +4,7 @@ import { bentobox, exlamation } from "../custom/img";
 const AmbilBekal = ({ data }) => {
   return (
     <div className="w-100" style={{ position: "relative", overflow: "hidden" }}>
-      {console.log(data)}
+      {/* {console.log(data)} */}
       <div
         className="__whatisimg __float"
         style={{

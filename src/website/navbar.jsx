@@ -136,8 +136,8 @@ const NavBar = (props) => {
                 onClick={handleLogin}
               >
                 <img
-                  src={user.photoURL}
-                  alt={user.displayName[0]}
+                  src={user.photoURL || "./assets/img/profile.jpg"}
+                  alt={user.displayName ? user.displayName[0] : "U"}
                   style={{
                     width: "30px",
                     height: "30px",

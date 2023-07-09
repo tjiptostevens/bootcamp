@@ -21,17 +21,20 @@ const Cart = () => {
           <div className="__cartitems">
             {data.map((d) => {
               if (cartItems[d.id]) {
-                return <CartItem data={d} />;
+                return <CartItem key={crypto.randomUUID()} data={d} />;
               }
             })}
           </div>
-          <div className="row  w-100 align-item-center">
+          <div className="row  w-100 align-item-center justify-content-end">
             <div className="col-auto __programbutton">
               <button className="btn" onClick={handleCheckOut}>
                 bayar bekal
               </button>
             </div>
-            <div className="col-auto " style={{ padding: "25px 0" }}>
+            <div
+              className="col-auto "
+              style={{ padding: "25px 0", marginLeft: "25px" }}
+            >
               <Link to="/">
                 <button
                   className="btn btn-light"

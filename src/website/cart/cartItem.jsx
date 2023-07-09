@@ -8,7 +8,7 @@ const CartItem = ({ data }) => {
     addToCart(data.id);
   };
   return (
-    <div className="w-100">
+    <div key={data.id} className="w-100">
       {/* {JSON.stringify(data)} */}
       <div className="__cartitemcontainer">
         <div
