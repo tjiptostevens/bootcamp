@@ -4,9 +4,11 @@ import { handleBlur } from "../custom/animation";
 import { shoppingCart } from "../custom/img";
 import ProgramComp from "./programcomp";
 import AmbilBekal from "./ambilbekal";
+import { useEffect, useState } from "react";
 
 const Program = () => {
-  const { data } = getFsData("courses", true);
+  const { data } = getFsData("courses");
+
   return (
     <div
       id="bekal"
@@ -44,7 +46,7 @@ const Program = () => {
           </div>
           <div className="__programitemcontainer">
             {data.map((d) => (
-              <ProgramComp key={crypto.randomUUID()} data={d} />
+              <ProgramComp key={d.id} data={d} />
             ))}
           </div>
         </div>

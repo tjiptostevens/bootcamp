@@ -1,25 +1,8 @@
 import "../assets/css/homefaq.css";
 import { getFsData } from "../config/firestore";
 import { questionMark } from "../custom/img";
-const faqItem = [
-  {
-    question: "Apakah ada batasan usia untuk bisa ikut program SCOLA ?",
-    answer:
-      "Tidak ada batasan usia untuk dapat mengikuti SCOLA. Akan tetapi kami menyarankan agar pembelajaran ini di berikan minimal usia 15tahun ke atas. ",
-  },
-  {
-    question: "Bagaimana jika saya tidak dapat menghadiri sesi pembelajaran?",
-    answer:
-      "Kami menyediakan rekaman tiap sesi kelas yang berlangsung beserta materinya. Minimum kehadiran juga 70% dari total sesi, jadi tidak perlu khawatir tertinggal. Kamu juga dapat bertanya diluar sesi kelas, class manager dan tutor kami selalu standby untuk menjawab pertanyaan kamu.",
-  },
-  {
-    question: "Saya telah sukses melakukan pembayaran apa langkah selanjutnya?",
-    answer:
-      "Kamu akan menerima email konfirmasi pembayaran sukses dan akan menerima email invitation ke group student maksimal 3x24 jam di hari kerja. Apabila kamu belum menerima email tersebut, silahkan chat admin customer service kami.",
-  },
-];
 const Faq = () => {
-  const { data } = getFsData("faqs", true);
+  const { data } = getFsData("faqs");
 
   return (
     <>

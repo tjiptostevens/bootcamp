@@ -43,7 +43,7 @@ const updateFsData = async (collectionName, title, data) => {
   }
 };
 
-const getFsData = (collectionName, id) => {
+const getFsData = (collectionName) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const getFsData = (collectionName, id) => {
     };
 
     getData();
-  }, [collectionName, id]);
+  }, [collectionName]);
 
   return { data };
 };

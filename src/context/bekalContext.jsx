@@ -4,7 +4,7 @@ import { getFsData } from "../config/firestore";
 const BekalContext = createContext(null);
 const getDefaultCart = () => {
   let cart = {};
-  const { data } = getFsData("courses", true);
+  const { data } = getFsData("courses");
   for (let i = 0; i < data.length; i++) {
     const { id } = data[i];
     cart[id] = false;
