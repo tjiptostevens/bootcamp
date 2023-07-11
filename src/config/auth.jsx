@@ -18,6 +18,8 @@ const signInWithGoogle = async () => {
     console.log("user : ", user);
     let data = {
       uid: user.user.uid,
+      email: user.user.email,
+      mobile: "",
       displayName: user.user.displayName,
       photoURL: user.user.photoURL,
       isOnline: true,
@@ -32,12 +34,13 @@ const signInWithGoogle = async () => {
 const registerWithEmailPassword = async (email, password) => {
   try {
     const user = await createUserWithEmailAndPassword(auth, email, password);
-    console.log("user : ", user);
     let data = {
       uid: user.user.uid,
+      email: user.user.email,
+      mobile: "",
       displayName: user.user.displayName,
       photoURL: user.user.photoURL,
-      isOnline: false,
+      isOnline: true,
     };
     await setFsData("users", user.user.uid, data);
     return user;

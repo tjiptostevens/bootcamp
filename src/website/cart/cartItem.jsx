@@ -3,6 +3,7 @@ import { BekalContext } from "../../context/bekalContext";
 
 const CartItem = ({ data }) => {
   const { addToCart, cartItems } = useContext(BekalContext);
+
   const cartItem = cartItems[data.id];
   const handleAddToCart = () => {
     addToCart(data.id);

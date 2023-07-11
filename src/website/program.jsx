@@ -1,13 +1,12 @@
 import "../assets/css/homeprogram.css";
 import { getFsData } from "../config/firestore";
-import { handleBlur } from "../custom/animation";
 import { shoppingCart } from "../custom/img";
 import ProgramComp from "./programcomp";
 import AmbilBekal from "./ambilbekal";
-import { useEffect, useState } from "react";
 
 const Program = () => {
-  const { data } = getFsData("courses");
+  const conditions = [{ field: "isActive", operator: "==", value: true }];
+  const { data } = getFsData("courses", conditions);
 
   return (
     <div

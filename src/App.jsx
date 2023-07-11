@@ -5,6 +5,7 @@ import "./assets/css/animation.css";
 import NavBar from "./website/navbar";
 import Home from "./website/home";
 import { BekalContextProvider } from "./context/bekalContext";
+import { UserContextProvider } from "./context/userContext";
 
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -68,10 +69,12 @@ function App() {
             "--bally": Math.floor(position.y * Math.random()) + "px",
           }}
         ></div>
-        <BekalContextProvider>
-          <NavBar />
-          <Home />
-        </BekalContextProvider>
+        <UserContextProvider>
+          <BekalContextProvider>
+            <NavBar />
+            <Home />
+          </BekalContextProvider>
+        </UserContextProvider>
         {/* <LmsHome /> */}
         {/* <Login /> */}
         {/* {crypto.randomUUID()} */}

@@ -43,16 +43,56 @@ const updateFsData = async (collectionName, title, data) => {
   }
 };
 
-const getFsData = (collectionName) => {
+// const getFsData = (collectionName, conditions = []) => {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     const getData = async () => {
+//       try {
+//         const q = query(
+//           collection(db, collectionName),
+//           where("isActive", "==", true)
+//           // where("uid", "==", id)
+//         );
+//         const querySnapshot = await getDocs(q);
+//         let results = [];
+//         querySnapshot.forEach((doc) => {
+//           let res = doc.data();
+//           let result = {
+//             id: doc.id,
+//             ...res,
+//           };
+//           results.push(result);
+//         });
+//         setData(results);
+//       } catch (error) {
+//         console.error(error);
+//         throw error;
+//       }
+//     };
+
+//     getData();
+//   }, [collectionName]);
+
+//   return { data };
+// };
+
+const getFsData = (collectionName, conditions = []) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const q = query(
-          collection(db, collectionName),
-          where("isActive", "==", true)
-        );
+        let q = collection(db, collectionName);
+
+        // Add dynamic where clauses based on conditions
+        if (conditions.length > 0) {
+          conditions.forEach((condition) => {
+            const { field, operator, value } = condition;
+            q = query(q, where(field, operator, value));
+          });
+        }
+
         const querySnapshot = await getDocs(q);
         let results = [];
         querySnapshot.forEach((doc) => {
@@ -71,7 +111,7 @@ const getFsData = (collectionName) => {
     };
 
     getData();
-  }, [collectionName]);
+  }, [collectionName, conditions]);
 
   return { data };
 };

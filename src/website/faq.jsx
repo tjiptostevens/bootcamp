@@ -2,7 +2,8 @@ import "../assets/css/homefaq.css";
 import { getFsData } from "../config/firestore";
 import { questionMark } from "../custom/img";
 const Faq = () => {
-  const { data } = getFsData("faqs");
+  const conditions = [{ field: "isActive", operator: "==", value: true }];
+  const { data } = getFsData("faqs", conditions);
 
   return (
     <>

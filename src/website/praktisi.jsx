@@ -3,8 +3,8 @@ import { getFsData } from "../config/firestore";
 import useFetch from "../custom/useFetch";
 
 const Praktisi = () => {
-  // const { data } = useFetch("https://dummyjson.com/users");
-  const { data } = getFsData("praktisi", true);
+  const conditions = [{ field: "isActive", operator: "==", value: true }];
+  const { data } = getFsData("praktisi", conditions);
 
   return (
     <div className="w-100">
