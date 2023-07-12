@@ -1,17 +1,24 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { getFsData, updateFsData } from "../config/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../config/auth";
 
 const UserContext = createContext(null);
-const getDefaultCart = () => {
-  let cart = {};
-  const conditions = [{ field: "isActive", operator: "==", value: true }];
-  const { data } = getFsData("users", conditions);
-  console.log(data);
 
-  return data;
-};
 const UserContextProvider = (props) => {
-  const [userData, setUserData] = useState(getDefaultCart());
+  const [userData, setUserData] = useState({});
+  const [user] = useAuthState(auth);
+  useEffect(() => {
+    const getDefaultData = () => {
+      const conditions = [{ field: "uid", operator: "==", value: user.uid }];
+      const { data } = getFsData("users", conditions);
+      setUserData(data);
+    };
+
+    setTimeout(() => {
+      getDefaultData();
+    }, 1000);
+  }, []);
   const updateUserData = async (itemId) => {
     let update = await updateFsData("users", uid, data);
     setUserData((prev) => ({ ...prev, [itemId]: !prev[itemId] }));

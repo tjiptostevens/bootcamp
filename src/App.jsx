@@ -6,9 +6,21 @@ import NavBar from "./website/navbar";
 import Home from "./website/home";
 import { BekalContextProvider } from "./context/bekalContext";
 import { UserContextProvider } from "./context/userContext";
+import useMousePosition from "./custom/useMousePosition";
+import useRandomPosition from "./custom/useRandomPosition";
 
 function App() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const randomPosition = useRandomPosition();
+  const mousePosition = useMousePosition();
+  const [position, setPosition] = useState({
+    x: randomPosition.x,
+    y: randomPosition.y,
+  });
+
+  useEffect(() => {
+    setPosition({ x: mousePosition.x, y: mousePosition.y });
+  }, [mousePosition]);
+
   // useEffect(() => {
   //   const handleMouseMove = (event) => {
   //     const mouseX = event.clientX;
@@ -27,17 +39,17 @@ function App() {
   //     window.removeEventListener("mousemove", handleMouseMove);
   //   };
   // }, []);
-  useEffect(() => {
-    const updatePosition = () => {
-      const newX = Math.random() * window.innerWidth;
-      const newY = Math.random() * window.innerHeight;
-      setPosition({ x: newX, y: newY });
-    };
+  // useEffect(() => {
+  //   const updatePosition = () => {
+  //     const newX = Math.random() * window.innerWidth;
+  //     const newY = Math.random() * window.innerHeight;
+  //     setPosition({ x: newX, y: newY });
+  //   };
 
-    const interval = setInterval(updatePosition, 10000);
+  //   const interval = setInterval(updatePosition, 10000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <>
