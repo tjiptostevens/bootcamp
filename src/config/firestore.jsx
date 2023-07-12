@@ -111,9 +111,9 @@ const getFsData = (collectionName, conditions = []) => {
     };
 
     getData();
-  }, [collectionName, conditions]);
+  }, []);
 
   return { data };
 };
 
-export { setFsData, addFsData, updateFsData, getFsData };
+export { db, setFsData, addFsData, updateFsData, getFsData };

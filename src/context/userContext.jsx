@@ -1,29 +1,50 @@
 import { createContext, useEffect, useState } from "react";
-import { getFsData, updateFsData } from "../config/firestore";
+import { db, getFsData, updateFsData } from "../config/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../config/auth";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  updateDoc,
+} from "firebase/firestore/lite";
 
 const UserContext = createContext(null);
 
 const UserContextProvider = (props) => {
   const [userData, setUserData] = useState({});
   const [user] = useAuthState(auth);
+  const userCollectionRef = collection(db, "users");
   useEffect(() => {
-    const getDefaultData = () => {
-      const conditions = [{ field: "uid", operator: "==", value: user.uid }];
-      const { data } = getFsData("users", conditions);
-      setUserData(data);
+    const getDefaultData = async () => {
+      const { data } = await getDocs(userCollectionRef);
+      console.log(data);
+      setUserData(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    setTimeout(() => {
-      getDefaultData();
-    }, 1000);
+    getDefaultData();
   }, []);
-  const updateUserData = async (itemId) => {
-    let update = await updateFsData("users", uid, data);
+  const createUserData = async (data) => {
+    await addDoc(userCollectionRef, data);
+  };
+  const updateUserData = async (id, data) => {
+    // let update = await updateFsData("users", uid, data);
+    const userDoc = doc(db, "users", id);
+    await updateDoc(userDoc, data);
     setUserData((prev) => ({ ...prev, [itemId]: !prev[itemId] }));
   };
-  const contextValue = { userData, updateUserData };
+  const deleteUserData = async (id) => {
+    const userDoc = doc(db, "users", id);
+    await deleteDoc(userDoc);
+  };
+  const contextValue = {
+    userData,
+    updateUserData,
+    createUserData,
+    deleteUserData,
+  };
   return (
     <UserContext.Provider value={contextValue}>
       {props.children}
