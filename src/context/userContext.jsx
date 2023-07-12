@@ -14,9 +14,11 @@ import {
 const UserContext = createContext(null);
 
 const UserContextProvider = (props) => {
-  const [userData, setUserData] = useState({});
   const [user] = useAuthState(auth);
+
+  const [userData, setUserData] = useState({});
   const userCollectionRef = collection(db, "users");
+
   useEffect(() => {
     const getDefaultData = async () => {
       const { data } = await getDocs(userCollectionRef);
@@ -26,25 +28,30 @@ const UserContextProvider = (props) => {
 
     getDefaultData();
   }, []);
+
   const createUserData = async (data) => {
     await addDoc(userCollectionRef, data);
   };
+
   const updateUserData = async (id, data) => {
     // let update = await updateFsData("users", uid, data);
     const userDoc = doc(db, "users", id);
     await updateDoc(userDoc, data);
     setUserData((prev) => ({ ...prev, [itemId]: !prev[itemId] }));
   };
+
   const deleteUserData = async (id) => {
     const userDoc = doc(db, "users", id);
     await deleteDoc(userDoc);
   };
+
   const contextValue = {
     userData,
     updateUserData,
     createUserData,
     deleteUserData,
   };
+
   return (
     <UserContext.Provider value={contextValue}>
       {props.children}
