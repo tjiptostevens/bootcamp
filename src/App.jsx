@@ -9,24 +9,24 @@ import { UserContextProvider } from "./context/userContext";
 
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
-      // console.log(mouseX, mouseY);
-      setPosition({
-        ...position,
-        x: position.x + mouseX,
-        y: position.y + mouseY,
-      });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     const mouseX = event.clientX;
+  //     const mouseY = event.clientY;
+  //     // console.log(mouseX, mouseY);
+  //     setPosition({
+  //       ...position,
+  //       x: position.x + mouseX,
+  //       y: position.y + mouseY,
+  //     });
+  //   };
 
-    window.addEventListener("mousemove", handleMouseMove);
+  //   window.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
   useEffect(() => {
     const updatePosition = () => {
       const newX = Math.random() * window.innerWidth;
