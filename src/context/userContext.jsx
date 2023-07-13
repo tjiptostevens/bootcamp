@@ -16,21 +16,23 @@ const UserContext = createContext(null);
 const UserContextProvider = (props) => {
   const [user] = useAuthState(auth);
 
-  const [userData, setUserData] = useState({});
-  const userCollectionRef = collection(db, "users");
+  const [userData, setUserData] = useState([]);
+  const collectionRef = collection(db, "users");
 
   useEffect(() => {
     const getDefaultData = async () => {
-      const { data } = await getDocs(userCollectionRef);
-      console.log(data);
-      setUserData(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      const { data } = await getDocs(collectionRef);
+      console.log("users", data);
+      if (data) {
+        setUserData(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      }
     };
 
     getDefaultData();
   }, []);
 
   const createUserData = async (data) => {
-    await addDoc(userCollectionRef, data);
+    await addDoc(collectionRef, data);
   };
 
   const updateUserData = async (id, data) => {

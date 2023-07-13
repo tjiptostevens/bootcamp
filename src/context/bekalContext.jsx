@@ -1,34 +1,33 @@
 import { createContext, useEffect, useState } from "react";
-import { getFsData } from "../config/firestore";
+import { db } from "../config/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDocs,
+  updateDoc,
+} from "firebase/firestore/lite";
 
 const BekalContext = createContext(null);
-// const getDefaultCart = () => {
-//   const conditions = [{ field: "isActive", operator: "==", value: true }];
-//   let cart = {};
-//   const { data } = getFsData("courses", conditions);
-//   for (let i = 0; i < data.length; i++) {
-//     const { id } = data[i];
-//     cart[id] = false;
-//   }
-//   return cart;
-// };
+
 const BekalContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState({});
+  const [cartItems, setCartItems] = useState([]);
+  const [bekalItems, setBekalItems] = useState([]);
+  const collectionRef = collection(db, "courses");
 
   useEffect(() => {
-    const getDefaultCart = () => {
-      const conditions = [{ field: "isActive", operator: "==", value: true }];
-      const { data } = getFsData("courses", conditions);
-      const cart = {};
-      data.forEach(({ id }) => {
-        cart[id] = false;
-      });
-      setCartItems(cart);
+    const getDefaultData = () => {
+      const { data } = getDocs(collectionRef);
+      console.log("bekal", data);
+      if (data) {
+        setCartItems(
+          data.docs.map((doc) => ({ ...cartItems, [doc.id]: false }))
+        );
+        setBekalItems(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      }
     };
 
-    setTimeout(() => {
-      getDefaultCart();
-    }, 1000);
+    getDefaultData();
   }, []);
 
   const addToCart = (itemId) => {
@@ -38,7 +37,26 @@ const BekalContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: !prev[itemId] }));
   };
 
-  const contextValue = { cartItems, addToCart, removeFromCart };
+  const createBekal = async (data) => {
+    await addDoc(collectionRef, data);
+  };
+  const updateBekal = async (id, data) => {
+    const bekalDoc = doc(db, "courses", id);
+    await updateDoc(bekalDoc, data);
+  };
+  const deleteBekal = async (id) => {
+    const bekalDoc = doc(db, "courses", id);
+    await deleteDoc(bekalDoc);
+  };
+  const contextValue = {
+    cartItems,
+    bekalItems,
+    addToCart,
+    removeFromCart,
+    createBekal,
+    updateBekal,
+    deleteBekal,
+  };
 
   return (
     <BekalContext.Provider value={contextValue}>
